@@ -8,6 +8,10 @@ import { dealSchema, emailSchema, fieldErrors, keyDateSchema, retailerLinkSchema
 const nowIso = () => new Date().toISOString();
 const LIVE = `status = 'published' AND (ends_at IS NULL OR ends_at > ?)`;
 
+// Brand-level Awin link supplied by the publisher for Estée Lauder (advertiser 123256).
+// A deal-specific deep link always takes precedence when one has been saved.
+const ESTEE_LAUDER_AWIN_LINK = "https://www.awin1.com/cread.php?awinmid=123256&awinaffid=3140953";
+
 const londonDay = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/London", year: "numeric", month: "2-digit", day: "2-digit" });
 
 function toPublic(d: ReturnType<typeof toDeal>): PublicDeal {
@@ -66,7 +70,7 @@ app.post("/api/subscribe", async (c) => {
 });
 
 app.get("/go/:slug", (c) => {
-  const row = db().prepare(`SELECT id, url, affiliate_url FROM deals WHERE slug = ? AND status != 'draft'`).get(c.req.param("slug"));
+  const row = db().prepare(`SELECT id, url, affiliate_url, retailer FROM deals WHERE slug = ? AND status != 'draft'`).get(c.req.param("slug"));
   if (!row) return c.redirect("/", 302);
   const ua = c.req.header("user-agent") ?? "";
   const prefetch = /prefetch|prerender/i.test(`${c.req.header("purpose") ?? ""} ${c.req.header("sec-purpose") ?? ""}`);
@@ -77,7 +81,9 @@ app.get("/go/:slug", (c) => {
   }
   c.header("Cache-Control", "no-store");
   c.header("X-Robots-Tag", "noindex");
-  return c.redirect(String(row.affiliate_url || row.url), 302);
+  const isEsteeLauder = String(row.retailer).trim().toLocaleLowerCase("en") === "estée lauder";
+  const destination = row.affiliate_url || (isEsteeLauder ? ESTEE_LAUDER_AWIN_LINK : row.url);
+  return c.redirect(String(destination), 302);
 });
 
 /* ---------- Admin: session ---------- */
