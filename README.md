@@ -45,6 +45,19 @@ Ship a new version with:
 pnpm run deploy           # typecheck, build, upload, switch release, health check (rolls back on failure)
 ```
 
+### Automatic deployment from GitHub
+
+The `.github/workflows/deploy.yml` workflow runs on every push to `main` (and can also be started manually from the Actions tab). Before the first successful run, add these **repository Actions secrets** under **Settings → Secrets and variables → Actions**:
+
+| Secret | Value |
+|---|---|
+| `DEPLOY_HOST` | SSH destination in `user@host` form for the same server currently reached by the `hermes-box` SSH alias |
+| `DEPLOY_SSH_KEY` | Private SSH key for that deployment account; its public key must be authorized on the server |
+| `DEPLOY_KNOWN_HOSTS` | The verified SSH host-key line(s) for that server, as stored in `~/.ssh/known_hosts` |
+
+The deployment account must have the same permissions and server-side tools required by `scripts/deploy.sh` (including pnpm and permission to install releases, change the live symlink and restart `lumiere.service`). Verify the server host-key fingerprint before saving it; do not disable SSH host-key checking. Optionally add the Actions variable `DEPLOY_URL` if the public health-check URL should differ from `https://lumiere.dazeb.dev`. The workflow keeps the database and production environment file untouched and uses the deploy script's health check and rollback.
+
+
 | On the server | |
 |---|---|
 | Service | `lumiere.service` (systemd, user `lumiere`, `127.0.0.1:8790`) |
