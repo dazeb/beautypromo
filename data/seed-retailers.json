@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Boots",
+    "network": "Awin",
+    "signupUrl": "https://ui.awin.com/merchant-profile/2041",
+    "commission": null,
+    "notes": "Boots.com programme (advertiser 2041). Covers the No7 and 24 Days of Luxe calendars, which are sold on boots.com."
+  },
+  {
+    "name": "Charlotte Tilbury",
+    "network": "Partnerize",
+    "signupUrl": "https://signup.partnerize.com/signup/en/charlottetilbury",
+    "commission": "About 10% (brand's average)",
+    "notes": "Once your Partnerize account is set up, search for and join the global Charlotte Tilbury campaigns."
+  },
+  {
+    "name": "Clinique",
+    "network": "Skimlinks",
+    "signupUrl": "https://merchant.skimlinks.com/network/33097/Clinique-affiliate-program",
+    "commission": null,
+    "notes": "No direct UK programme found on clinique.co.uk (checked 31 Oct 2026), so Skimlinks is the route."
+  },
+  {
+    "name": "Cult Beauty",
+    "network": "Awin",
+    "signupUrl": "https://ui.awin.com/merchant-profile/29063",
+    "commission": null,
+    "notes": "Cult Beauty Global programme."
+  },
+  {
+    "name": "Estée Lauder",
+    "network": "Direct",
+    "signupUrl": "https://www.esteelauder.co.uk/affiliate",
+    "commission": "10% (launch offer)",
+    "notes": "Apply with the form on the brand's own page. The network isn't named."
+  },
+  {
+    "name": "Glossybox",
+    "network": "Awin",
+    "signupUrl": "https://ui.awin.com/merchant-profile/3749",
+    "commission": "10% new, 5% returning subscribers",
+    "notes": null
+  },
+  {
+    "name": "Lookfantastic",
+    "network": "Awin",
+    "signupUrl": "https://ui.awin.com/merchant-profile/2082",
+    "commission": null,
+    "notes": "LOOKFANTASTIC UK programme."
+  },
+  {
+    "name": "M&S Beauty",
+    "network": "Awin",
+    "signupUrl": "https://ui.awin.com/merchant-profile/1402",
+    "commission": null,
+    "notes": "Marks and Spencer UK programme."
+  },
+  {
+    "name": "Sephora UK",
+    "network": "Partnerize",
+    "signupUrl": "https://join.partnerize.com/sephorauk",
+    "commission": null,
+    "notes": null
+  },
+  {
+    "name": "Space NK",
+    "network": "Awin",
+    "signupUrl": "https://ui.awin.com/merchant-profile/59805",
+    "commission": null,
+    "notes": "Space NK - UK programme. Creators can also join their content creator community."
+  },
+  {
+    "name": "Superdrug",
+    "network": null,
+    "signupUrl": "https://www.superdrug.com/affiliate",
+    "commission": null,
+    "notes": "Superdrug's affiliate page says \"Coming soon\" (checked 31 Oct 2026)."
+  },
+  {
+    "name": "YOU Beauty",
+    "network": null,
+    "signupUrl": null,
+    "commission": null,
+    "notes": "No affiliate programme found. The calendar is sold on youbeautyshop.co.uk."
+  }
+]
