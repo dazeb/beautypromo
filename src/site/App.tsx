@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { isEndingSoon, isLive, pounds } from "../shared/format";
 import { CATEGORIES, type PublicData } from "../shared/types";
 import { DealCard } from "./components/DealCard";
+import { BrandShowcase } from "./components/BrandShowcase";
 import { HeroArt } from "./components/HeroArt";
 import { Advent, EndingSoon, Featured, KeyDates, Newsletter, Verified } from "./components/Sections";
 
@@ -124,6 +125,8 @@ export function App({ data }: { data: PublicData }) {
         </section>
 
         {featured ? <Featured deal={featured} /> : null}
+
+        <BrandShowcase deals={offers} />
 
         <EndingSoon deals={ending} now={now} />
 
