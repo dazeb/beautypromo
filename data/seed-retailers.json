@@ -82,5 +82,47 @@
     "signupUrl": null,
     "commission": null,
     "notes": "No affiliate programme found. The calendar is sold on youbeautyshop.co.uk."
+  },
+  {
+    "name": "Facetheory",
+    "network": "Webgains",
+    "signupUrl": "https://www.webgains.com/",
+    "commission": null,
+    "notes": "UK skincare brand. Search for Facetheory after creating a Webgains publisher account; confirm coupon-site acceptance and current terms."
+  },
+  {
+    "name": "Beauty Bay",
+    "network": "Awin",
+    "signupUrl": "https://ui.awin.com/merchant-profile/15526",
+    "commission": null,
+    "notes": "UK beauty retailer. Awin advertiser 15526; check deal/voucher publisher policy and market eligibility."
+  },
+  {
+    "name": "Notino",
+    "network": "CJ",
+    "signupUrl": "https://www.cj.com/",
+    "commission": null,
+    "notes": "International beauty and fragrance retailer. Join CJ as a publisher, then apply to the available Notino regional programme; commissions and countries vary."
+  },
+  {
+    "name": "Huda Beauty",
+    "network": "Partnerize",
+    "signupUrl": "https://partnerize.com/partners/affiliates",
+    "commission": null,
+    "notes": "International cosmetics brand. Search Huda Beauty campaigns in Partnerize; confirm eligible countries, voucher code rules and commission."
+  },
+  {
+    "name": "LOOKFANTASTIC EU",
+    "network": "Awin",
+    "signupUrl": "https://ui.awin.com/merchant-profile/2082",
+    "commission": null,
+    "notes": "LOOKFANTASTIC regional programmes may be separate. Check available markets and the voucher/deals publisher rate in Awin before adding international links."
+  },
+  {
+    "name": "NordenBeauty",
+    "network": "Awin",
+    "signupUrl": "https://ui.awin.com/",
+    "commission": null,
+    "notes": "Awin programme; check advertiser availability, current terms and allowed publisher types in your account."
   }
 ]
