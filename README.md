@@ -4,6 +4,8 @@
 
 A promo site for UK makeup, skincare and fragrance offers, with an admin panel for managing them. Vite + React on the front, a small Hono server on Node 24, and SQLite (Node's built-in `node:sqlite`) for storage.
 
+> Session handover: [31 October 2026 project notes](docs/SESSION-HANDOVER-2026-10-31.md) — recent Estée Lauder/Awin routing, affiliate setup, visual merchandising work and automatic deployment status.
+
 ## Setup
 
 Needs Node 24+ and pnpm.
