@@ -29,10 +29,10 @@
   },
   {
     "name": "Estée Lauder",
-    "network": "Direct",
-    "signupUrl": "https://www.esteelauder.co.uk/affiliate",
-    "commission": "10% (launch offer)",
-    "notes": "Apply with the form on the brand's own page. The network isn't named."
+    "network": "Awin",
+    "signupUrl": "https://ui.awin.com/merchant-profile/123256",
+    "commission": null,
+    "notes": "Awin advertiser 123256. The publisher's base tracking link is configured as a fallback for Estée Lauder offers; use offer-specific Awin deep links where available."
   },
   {
     "name": "Glossybox",
