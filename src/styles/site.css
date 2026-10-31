@@ -638,6 +638,62 @@ em {
   color: var(--ivory);
 }
 
+/* ---------- Retailer / brand showcase ---------- */
+
+.brands__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+  gap: 0.8rem;
+}
+.brand-tile {
+  position: relative;
+  display: flex;
+  min-height: 8.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.1rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--wine);
+  background: linear-gradient(145deg, #f1e4dc, #e4c9bd);
+  border: 1px solid #e2d0c5;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.brand-tile:nth-child(3n + 2) { color: #3f4a35; background: linear-gradient(145deg, #edf0e7, #d6dfd0); }
+.brand-tile:nth-child(3n) { color: #4b2f52; background: linear-gradient(145deg, #eee5ef, #d9c9df); }
+.brand-tile:hover { transform: translateY(-3px); box-shadow: 0 14px 28px -22px #3c1e14aa; }
+.brand-tile__wordmark {
+  position: relative;
+  z-index: 1;
+  max-width: 12ch;
+  font: 500 clamp(1.25rem, 2vw, 1.8rem)/1 var(--serif);
+  overflow-wrap: anywhere;
+}
+.brand-tile__offer {
+  position: relative;
+  z-index: 1;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.brand-tile__orb {
+  position: absolute;
+  width: 7rem;
+  aspect-ratio: 1;
+  right: -1.2rem;
+  top: 1.5rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.18;
+}
+.brand-tile__orb::after {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+
 /* ---------- Deal cards ---------- */
 
 .grid {
@@ -703,6 +759,7 @@ em {
   background: linear-gradient(150deg, var(--tone-a), var(--tone-b));
   color: var(--tone-ink);
   overflow: hidden;
+  isolation: isolate;
 }
 .card__swatch::after {
   content: "";
@@ -715,6 +772,66 @@ em {
   border: 1px solid currentColor;
   opacity: 0.18;
 }
+.card__art {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  opacity: 0.92;
+  pointer-events: none;
+}
+.card__art-orbit {
+  position: absolute;
+  width: 11rem;
+  aspect-ratio: 1;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.24;
+}
+.card__art-product {
+  position: relative;
+  z-index: 1;
+  width: 4.4rem;
+  height: 7.3rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid #fff9;
+  border-radius: 0.8rem 0.8rem 1.1rem 1.1rem;
+  background: linear-gradient(100deg, #8f5c55, #f2d4c3 25%, #c78e80 72%, #75434b);
+  box-shadow: 0.8rem 1rem 1.3rem #40232935, inset 0 0 1rem #fff8;
+  transform: rotate(-7deg);
+}
+.card__art-product::before {
+  content: "";
+  position: absolute;
+  width: 48%;
+  height: 1.2rem;
+  bottom: 100%;
+  border-radius: 0.15rem 0.15rem 0 0;
+  background: linear-gradient(90deg, #8a683f, #f0d7a3, #9b7445);
+}
+.card__art-product span {
+  width: 78%;
+  height: 34%;
+  border: 1px solid #fff9;
+  background: #f6e8dcaa;
+}
+.card__art-shadow {
+  position: absolute;
+  width: 9rem;
+  height: 1.2rem;
+  bottom: 1.3rem;
+  border-radius: 50%;
+  background: #4b252533;
+  filter: blur(0.5rem);
+}
+.card__art--skincare .card__art-product { width: 3.8rem; height: 7.7rem; border-radius: 0.5rem; background: linear-gradient(100deg, #77836a, #e8ead9 28%, #b9c3a8 75%, #66745e); }
+.card__art--fragrance .card__art-product { width: 5.2rem; height: 6.2rem; border-radius: 1.2rem 1.2rem 0.7rem 0.7rem; background: linear-gradient(100deg, #8b6a8e, #f1ddec 28%, #b99bbc 75%, #6c4c70); }
+.card__art--gift .card__art-product { width: 6.8rem; height: 5.2rem; border-radius: 0.2rem; background: linear-gradient(100deg, #ad8951, #f4e5bd 28%, #d5b77e 75%, #8b6c3e); }
+.card__art--code .card__art-product { width: 5.8rem; height: 5.8rem; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #f4d8ca, #bd8b85 70%); }
+.card__retailer, .card__headline, .card__sub { position: relative; z-index: 2; }
+
 .card__retailer {
   font-size: 0.68rem;
   font-weight: 600;
