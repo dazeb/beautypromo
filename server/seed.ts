@@ -20,14 +20,15 @@ function seedRetailers() {
   const fill = db().prepare(
     `UPDATE retailers SET
        network = COALESCE(NULLIF(network, ''), ?), signup_url = COALESCE(NULLIF(signup_url, ''), ?),
-       commission = COALESCE(NULLIF(commission, ''), ?), notes = COALESCE(NULLIF(notes, ''), ?)
+       commission = COALESCE(NULLIF(commission, ''), ?), notes = COALESCE(NULLIF(notes, ''), ?),
+       my_link = COALESCE(NULLIF(my_link, ''), ?)
      WHERE name = ?`,
   );
   db().exec("BEGIN");
   for (const item of items) {
     const r = retailerSchema.parse(item);
     db().prepare("INSERT OR IGNORE INTO retailers (name) VALUES (?)").run(r.name);
-    fill.run(r.network, r.signupUrl, r.commission, r.notes, r.name);
+    fill.run(r.network, r.signupUrl, r.commission, r.notes, r.myLink, r.name);
   }
   const removed = db()
     .prepare(

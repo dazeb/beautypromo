@@ -35,6 +35,14 @@
     "notes": "Awin advertiser 123256. The publisher's base tracking link is configured as a fallback for Estée Lauder offers; use offer-specific Awin deep links where available."
   },
   {
+    "name": "Estée Lauder (Canada)",
+    "network": null,
+    "signupUrl": null,
+    "commission": null,
+    "myLink": "https://www.esteelauder.ca/products/1799/product-catalog/bestsellers?siteID=TnL5HPStwNw-w2TVeknoBxbozM_d1HYG2A&url=https://www.esteelauder.ca/products/1799/product-catalog/bestsellers?utm_source=TnL5HPStwNw%26utm_medium=Affiliate%26utm_content=2116208%26utm_campaign=2083561%26ranMID=39634%26ranEAID=2116208%26ranSiteID=TnL5HPStwNw-w2TVeknoBxbozM_d1HYG2A&skimoffer=4255621",
+    "notes": "Canada bestsellers link supplied by the publisher. Confirm affiliate tracking and programme terms before publishing."
+  },
+  {
     "name": "Glossybox",
     "network": "Awin",
     "signupUrl": "https://ui.awin.com/merchant-profile/3749",
@@ -117,6 +125,14 @@
     "signupUrl": "https://ui.awin.com/merchant-profile/2082",
     "commission": null,
     "notes": "LOOKFANTASTIC regional programmes may be separate. Check available markets and the voucher/deals publisher rate in Awin before adding international links."
+  },
+  {
+    "name": "Victoria's Secret PINK (US)",
+    "network": null,
+    "signupUrl": null,
+    "commission": null,
+    "myLink": "https://www.victoriassecret.com/us/pink/sleepwear?skimoffer=4252832",
+    "notes": "US PINK sleepwear link supplied by the publisher. Confirm affiliate tracking and programme terms before publishing."
   },
   {
     "name": "NordenBeauty",
