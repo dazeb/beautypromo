@@ -9,6 +9,8 @@ export const NETWORKS: Record<string, string> = {
   Awin: "https://www.awin.com/gb/",
   Partnerize: "https://partnerize.com/partners/affiliates",
   Skimlinks: "https://www.skimlinks.com/",
+  CJ: "https://www.cj.com/publisher",
+  Webgains: "https://www.webgains.com/publishers/",
 };
 
 /** Account-specific link builders require signing in; use the network's verified portal. */
@@ -24,6 +26,14 @@ export const LINK_TOOLS: Record<string, { url: string; instructions: string }> =
   Skimlinks: {
     url: "https://hub.skimlinks.com/",
     instructions: "Sign in to the Skimlinks Hub and open its Link Generator. Paste the offer's page URL and copy the monetised link. Your site must be approved and the retailer available to your account.",
+  },
+  CJ: {
+    url: "https://members.cj.com/",
+    instructions: "Sign in to CJ, join the retailer's advertiser programme, then use Links → Create Link (or the advertiser's deep-link tool). Paste the exact offer page as the destination and copy the generated tracking URL. Availability depends on advertiser approval and your publisher account.",
+  },
+  Webgains: {
+    url: "https://publisher.webgains.com/",
+    instructions: "Sign in to Webgains and apply to the advertiser first. Once approved, open the advertiser's links/deep-link tools, enter the exact offer page as the destination and copy the generated tracking URL. Check that the advertiser permits voucher-code publishers.",
   },
 };
 
