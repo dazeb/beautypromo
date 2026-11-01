@@ -7,6 +7,7 @@ import { app, publicAmpData, publicData } from "./app.ts";
 import { renderAmp } from "./amp.ts";
 import { applyContentUpdates } from "./content-updates.ts";
 import { createBlog } from "./blog.ts";
+import { renderLlms } from "./llms.ts";
 
 /** Production app: API + click tracker + the built site and admin from dist/. */
 export function createSite(dist = "dist") {
@@ -23,6 +24,10 @@ export function createSite(dist = "dist") {
   site.route("/", app);
   site.route("/", createBlog(version, publicData));
   site.get("/", (c) => c.html(renderSite()));
+  site.get("/llms.txt", (c) => {
+    c.header("Cache-Control", "public, max-age=60");
+    return c.text(renderLlms(publicData()));
+  });
   site.get("/amp", (c) => c.redirect("/amp/", 301));
   site.get("/amp/", (c) => {
     c.header("Cache-Control", "public, max-age=60");
