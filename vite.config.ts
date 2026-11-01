@@ -28,10 +28,15 @@ function api(): Plugin {
     configureServer(server) {
       server.middlewares.use(async (req, res, next) => {
         const path = req.url?.split("?")[0] ?? "";
-        if (path === "/amp" || path === "/amp/" || path.startsWith("/api/") || path.startsWith("/go/")) {
+        if (path === "/amp" || path === "/amp/" || path === "/blog" || path.startsWith("/blog/") || path.startsWith("/api/") || path.startsWith("/go/")) {
           await server.ssrLoadModule("/server/env.ts");
           const { applyContentUpdates } = await server.ssrLoadModule("/server/content-updates.ts");
           applyContentUpdates();
+        }
+        if (path === "/blog" || path.startsWith("/blog/")) {
+          const { publicData } = await server.ssrLoadModule("/server/app.ts");
+          const { createBlog } = await server.ssrLoadModule("/server/blog.ts");
+          return getRequestListener(createBlog(appVersion, publicData).fetch)(req, res);
         }
         if (path === "/amp" || path === "/amp/") {
           if (path === "/amp") {

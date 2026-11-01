@@ -43,7 +43,7 @@ The server puts the published offers into the HTML as it sends the home page, so
 
 The public homepage includes its title and description, an absolute canonical URL, Open Graph and Twitter card metadata, a 1200×630 PNG sharing image, and Organization, WebSite and CollectionPage JSON-LD. The sharing artwork source is `assets/social-card.svg`; the published image is `public/social-card.png`.
 
-Submit **https://beautypromos.deals/sitemap.xml** in Bing Webmaster Tools or Google Search Console. `public/sitemap.xml` lists only the canonical public homepage: filters and sections are part of that page, not separate indexable URLs. Add entries when new public pages are introduced. There is no invented last-modified timestamp.
+Submit **https://beautypromos.deals/sitemap.xml** in Bing Webmaster Tools or Google Search Console. `public/sitemap.xml` lists the canonical homepage, journal index and published article. Homepage filters and sections are not separate indexable URLs. Add entries when new public pages are introduced. There is no invented last-modified timestamp.
 
 `public/robots.txt` advertises the sitemap and allows crawlers to read indexing directives. Admin pages have route-specific titles, descriptions and canonical URLs, with `noindex, nofollow` in both HTML and response headers. API responses and affiliate redirects are also marked `noindex`; none belongs in the sitemap. Indexing directives are not access controls; admin authentication remains required.
 
@@ -57,7 +57,15 @@ On AMP, eligible offers without an existing affiliate destination link directly 
 
 At startup, a recorded one-time content update adds the No7 US campaign offer if missing and saves the supplied No7, Sephora, Cult Beauty and Estée Lauder Canada reference links. The Sephora link is a Poland Halloween campaign and does not replace UK offer destinations. Cult Beauty uses the clean `cultbeauty.com` Em the Nutritionist campaign URL. The Canadian Estée Lauder link stays separate from the UK Awin fallback. Later admin edits are preserved. This update does not rerun the full seed process.
 
-Run `pnpm check:amp` for route, document structure, escaping, offer visibility, affiliate routing, campaign update, and version checks against an isolated database. These checks do not replace validation with the official AMP validator; its runtime/rules CDN must be accessible for that validation.
+Run `pnpm check:amp` for route, document structure, escaping, offer visibility, affiliate routing, campaign update, and version checks against an isolated database. After building, `pnpm validate:amp` uses the official AMP validator to check a complete offers document and an empty edit. It downloads the validator rules from `cdn.ampproject.org` through the configured HTTPS proxy; set `AMP_VALIDATOR_JS` to a cached official `validator_wasm.js` file for offline validation. An inaccessible rules file is a failed validation attempt, not a pass. The GitHub Actions verification job runs these checks before deployment.
+
+The Dior US Beauty and Care Ritual gift-set listing is added by a separate recorded content update, so databases that already received the earlier campaign links also receive Dior. Its price, contents and availability are not marked verified. Subsequent admin edits are preserved.
+
+### Journal and product guide
+
+The server-rendered journal is `/blog/`, with the first article at `/blog/the-beauty-edit/`: **The Beauty Edit: Skincare, Makeup and Gifts, Considered**. It discusses No7 and Estée Lauder ranges, Cult Beauty and Sephora shopping, gift-set value and regional checkout details. It includes an affiliate disclosure and official source links, and does not promise current discounts or claim hands-on product testing.
+
+The main navigation and homepage introduce the journal. The article includes responsive styling, contents links, current offer suggestions, canonical and social metadata, `BlogPosting` structured data, and the shared numeric build version. Metadata lives in `src/shared/blog.ts`, article copy and routes in `server/blog.ts`, and styling in `public/blog.css`. Run `pnpm check:blog` for route, metadata and escaping checks.
 
 ### Live on hermes-box
 

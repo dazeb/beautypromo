@@ -6,6 +6,7 @@ import { adminMetadata } from "../src/shared/metadata.ts";
 import { app, publicAmpData, publicData } from "./app.ts";
 import { renderAmp } from "./amp.ts";
 import { applyContentUpdates } from "./content-updates.ts";
+import { createBlog } from "./blog.ts";
 
 /** Production app: API + click tracker + the built site and admin from dist/. */
 export function createSite(dist = "dist") {
@@ -20,6 +21,7 @@ export function createSite(dist = "dist") {
 
   const site = new Hono();
   site.route("/", app);
+  site.route("/", createBlog(version, publicData));
   site.get("/", (c) => c.html(renderSite()));
   site.get("/amp", (c) => c.redirect("/amp/", 301));
   site.get("/amp/", (c) => {

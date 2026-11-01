@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { isEndingSoon, isLive, pounds } from "../shared/format";
 import { CATEGORIES, type PublicData } from "../shared/types";
+import { BLOG_POST } from "../shared/blog";
 import { DealCard } from "./components/DealCard";
 import { BrandShowcase } from "./components/BrandShowcase";
 import { HeroArt } from "./components/HeroArt";
@@ -61,7 +62,7 @@ export function App({ data }: { data: PublicData }) {
         <p>
           {data.verifiedOn ? (
             <>
-              Every offer checked by hand on <Verified iso={data.verifiedOn} />
+              Latest recorded offer check: <Verified iso={data.verifiedOn} />
               <span className="announce__sep" aria-hidden="true">
                 ·
               </span>
@@ -80,6 +81,7 @@ export function App({ data }: { data: PublicData }) {
           <a href="#deals">The edit</a>
           {advent.length > 0 ? <a href="#advent">Advent</a> : null}
           <a href="#dates">Dates</a>
+          <a href="/blog/">The journal</a>
         </nav>
       </header>
 
@@ -156,6 +158,14 @@ export function App({ data }: { data: PublicData }) {
 
         <Advent deals={advent} />
         <KeyDates dates={data.dates} now={now} />
+        <section className="section journal" aria-labelledby="journal-title">
+          <p className="eyebrow">The journal</p>
+          <h2 id="journal-title">A little beauty reading.</h2>
+          <article className="journal__card">
+            <div className="journal__topics" aria-hidden="true"><span>Skincare</span><span>Makeup</span><span>Gifting</span></div>
+            <div className="journal__copy"><h3><a href={BLOG_POST.path}>{BLOG_POST.title}</a></h3><p>{BLOG_POST.description}</p><a className="journal__link" href={BLOG_POST.path}>Read the article <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </section>
         <Newsletter />
 
         <section className="section promise" aria-labelledby="promise-title">

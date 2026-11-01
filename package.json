@@ -13,6 +13,8 @@
     "check:affiliates": "node --test scripts/check-affiliates.ts",
     "check:seo": "pnpm build && node --test scripts/check-seo.ts",
     "check:amp": "pnpm build && node --test scripts/check-amp.ts",
+    "check:blog": "pnpm build && node --test scripts/check-blog.ts",
+    "validate:amp": "node scripts/validate-amp.ts",
     "deploy": "scripts/deploy.sh",
     "go-live": "scripts/go-live-domain.sh"
   },
@@ -33,6 +35,7 @@
     "@types/react-dom": "^19.3.0",
     "@types/three": "^0.186.0",
     "@vitejs/plugin-react": "^6.1.2",
+    "amphtml-validator": "^1.0.38",
     "typescript": "^7.0.2",
     "vite": "^8.3.5"
   }

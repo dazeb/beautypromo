@@ -121,7 +121,7 @@ test("sitemap lists only indexable canonical pages and robots advertises it", as
   assert.match(sitemap, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
   assert.match(sitemap, /xmlns="http:\/\/www.sitemaps.org\/schemas\/sitemap\/0.9"/);
   const locations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((entry) => entry[1]);
-  assert.deepEqual(locations, [canonical]);
+  assert.deepEqual(locations, [canonical, canonical + "blog/", canonical + "blog/the-beauty-edit/"]);
   assert.ok(!sitemap.includes("<lastmod>"));
   for (const location of locations) {
     const page = await site.request(location);

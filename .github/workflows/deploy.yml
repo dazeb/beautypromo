@@ -14,7 +14,27 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  verify:
+    name: Verify pages, affiliate routing and AMP validity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm build
+      - run: node --test scripts/check-seo.ts scripts/check-amp.ts scripts/check-affiliates.ts scripts/check-blog.ts
+      - run: pnpm validate:amp
+
   deploy:
+    needs: verify
     name: Build and deploy to hermes-box
     runs-on: ubuntu-latest
     steps:

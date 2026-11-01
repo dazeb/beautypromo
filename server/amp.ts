@@ -83,7 +83,7 @@ export function renderAmp(data: AmpData, version: string) {
     <p>beautypromos is independent. Some links are affiliate links, including links provided by Skimlinks, which means we may earn a small commission if you buy, at no extra cost to you. It never changes what we feature.</p>
     <p>Offers are subject to each retailer’s terms, stock and exclusions, and can change without notice. Please check the final price at checkout. Prices in GBP.</p>
     ${data.verifiedOn ? html`<p>Last checked <time datetime="${data.verifiedOn}">${date.format(new Date(data.verifiedOn))}</time>.</p>` : ""}
-    <a href="/">Visit the full site</a>
+    <a href="/">Visit the full site</a> · <a href="/blog/">Read the journal</a>
     <p class="version">Version ${version}</p>
   </footer>
   <amp-skimlinks layout="nodisplay" publisher-code="312095X1800668"></amp-skimlinks>

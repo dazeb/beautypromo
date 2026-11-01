@@ -147,7 +147,7 @@ export function Newsletter() {
   }
 
   return (
-    <section className="section newsletter" aria-labelledby="newsletter-title">
+    <section id="newsletter" className="section newsletter" aria-labelledby="newsletter-title">
       <div className="newsletter__card">
         <div>
           <p className="eyebrow">The Sunday Edit</p>

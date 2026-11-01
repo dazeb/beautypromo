@@ -112,6 +112,11 @@ test("campaign seed data preserves supplied links and regional details", () => {
 });
 
 test("requested campaigns are applied once without overwriting later admin edits", () => {
+  const dior = db().prepare("SELECT * FROM deals WHERE slug = ?").get("dior-us-beauty-care-ritual-gift-set")!;
+  assert.equal(dior.url, "https://www.dior.com/en_us/beauty/products/the-beauty-and-care-ritual-holiday-gift-set-2026-edition-Y1000123.html?skimoffer=4244464");
+  assert.equal(dior.price, null);
+  assert.equal(dior.worth, null);
+  assert.equal(dior.verified_at, null);
   const offer = db().prepare("SELECT * FROM deals WHERE slug = ?").get("no7-beauty-us-campaign")!;
   assert.equal(offer.url, no7);
   const sephora = db().prepare("SELECT * FROM retailers WHERE name = ?").get("Sephora UK")!;
