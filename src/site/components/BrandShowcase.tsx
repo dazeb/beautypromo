@@ -14,7 +14,8 @@ export function BrandShowcase({ deals }: { deals: PublicDeal[] }) {
   return (
     <section className="section brands" aria-labelledby="brands-title">
       <div className="section__head">
-        <h2 id="brands-title">Shop by brand</h2>
+        <p className="eyebrow">The names on our edit</p>
+        <h2 id="brands-title">Beauty brands worth a look</h2>
       </div>
       <div className="brands__grid">
         {brands.map((deal) => (
