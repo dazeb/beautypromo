@@ -21,6 +21,9 @@
   --gutter: clamp(1.25rem, 4vw, 4rem);
   --max: 1240px;
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --motion-fast: 180ms;
+  --motion-base: 260ms;
+  --motion-slow: 360ms;
 }
 
 *,
@@ -181,7 +184,7 @@ em {
   text-decoration: none;
   color: var(--muted);
   background: linear-gradient(var(--wine), var(--wine)) left calc(100% - 0.6rem) / 0 1px no-repeat;
-  transition: color 0.3s var(--ease), background-size 0.4s var(--ease);
+  transition: color var(--motion-fast) var(--ease), background-size var(--motion-base) var(--ease);
 }
 .site-nav a:hover,
 .site-nav a:focus-visible {
@@ -204,7 +207,7 @@ em {
   text-decoration: none;
   border: 1px solid var(--ink);
   border-radius: var(--radius);
-  transition: background 0.3s var(--ease), color 0.3s var(--ease);
+  transition: background-color var(--motion-base) var(--ease), color var(--motion-base) var(--ease), border-color var(--motion-base) var(--ease);
 }
 .btn--ink {
   background: var(--ink);
@@ -344,6 +347,13 @@ em {
 .hero-art__fallback {
   position: absolute;
   inset: 0;
+  transition: opacity var(--motion-slow) var(--ease);
+}
+.hero-art__scene {
+  opacity: 0;
+}
+.hero__art[data-scene-ready="true"] .hero-art__scene {
+  opacity: 1;
 }
 .hero-art__scene canvas {
   display: block;
@@ -607,6 +617,12 @@ em {
   color: var(--wine);
 }
 
+.ending__link,
+.card__link,
+.advent__name {
+  transition: color var(--motion-fast) var(--ease);
+}
+
 /* ---------- Filters ---------- */
 
 .filters {
@@ -624,7 +640,7 @@ em {
   background: transparent;
   color: var(--muted);
   cursor: pointer;
-  transition: all 0.25s var(--ease);
+  transition: background-color var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease), color var(--motion-fast) var(--ease);
 }
 @media (hover: hover) {
   .chip:hover {
@@ -657,7 +673,7 @@ em {
   color: var(--wine);
   background: linear-gradient(145deg, #f1e4dc, #e4c9bd);
   border: 1px solid #e2d0c5;
-  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  transition: transform var(--motion-base) var(--ease), box-shadow var(--motion-base) var(--ease);
 }
 .brand-tile:nth-child(3n + 2) { color: #3f4a35; background: linear-gradient(145deg, #edf0e7, #d6dfd0); }
 .brand-tile:nth-child(3n) { color: #4b2f52; background: linear-gradient(145deg, #eee5ef, #d9c9df); }
@@ -713,8 +729,8 @@ em {
   flex-direction: column;
   background: #fffdfa;
   border: 1px solid var(--line);
-  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
-  animation: rise 0.6s var(--ease) both;
+  transition: transform var(--motion-base) var(--ease), box-shadow var(--motion-base) var(--ease);
+  animation: rise var(--motion-slow) var(--ease) backwards;
 }
 @media (hover: hover) {
   .card:hover {
@@ -931,7 +947,7 @@ em {
   text-transform: uppercase;
   background: var(--paper);
   border-left: 1px dashed var(--gold);
-  transition: background 0.25s var(--ease);
+  transition: background-color var(--motion-fast) var(--ease);
 }
 .code:hover .code__action {
   background: var(--blush);
@@ -1088,6 +1104,9 @@ em {
 .newsletter__form input:focus {
   border-color: var(--ink);
 }
+.newsletter__form input {
+  transition: border-color var(--motion-fast) var(--ease);
+}
 .newsletter__form .btn {
   flex: 1 1 auto;
 }
@@ -1173,7 +1192,7 @@ em {
   letter-spacing: 0.04em;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+  transition: opacity var(--motion-base) var(--ease), transform var(--motion-base) var(--ease);
 }
 .toast--show {
   opacity: 1;

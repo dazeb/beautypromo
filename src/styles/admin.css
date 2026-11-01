@@ -82,7 +82,7 @@
   text-decoration: none;
   color: #cdc2b8;
   border-left: 2px solid transparent;
-  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+  transition: background-color var(--motion-fast) var(--ease), color var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease);
 }
 .adm-nav a:hover {
   color: #fffaf6;
@@ -114,6 +114,12 @@
 }
 .adm-side__link:hover {
   color: #fffaf6;
+}
+
+.adm-side__link,
+.adm-row-title,
+.adm-star {
+  transition: color var(--motion-fast) var(--ease);
 }
 
 .adm-main {
@@ -292,7 +298,7 @@
   width: 100%;
   min-height: 1px;
   background: linear-gradient(var(--rose), var(--wine));
-  transition: opacity 0.2s;
+  transition: opacity var(--motion-fast) var(--ease), height var(--motion-base) var(--ease);
 }
 .adm-chart__bar:hover .adm-chart__fill {
   opacity: 0.75;
@@ -337,6 +343,10 @@
 }
 .adm-table tr.is-past td {
   opacity: 0.6;
+}
+.adm-table tr,
+.adm-table td {
+  transition: background-color var(--motion-fast) var(--ease), opacity var(--motion-fast) var(--ease);
 }
 
 /* Stacked tables: on phones each row becomes a small card. The column headers stay in the
@@ -694,7 +704,7 @@ code {
   border: 1px solid transparent;
   border-radius: var(--radius);
   cursor: pointer;
-  transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+  transition: background-color var(--motion-fast) var(--ease), color var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease), opacity var(--motion-fast) var(--ease);
 }
 .adm-btn:disabled {
   opacity: 0.45;
@@ -808,6 +818,10 @@ code {
   background: var(--ink);
   color: var(--ivory);
 }
+.adm-segmented button,
+.adm-chip {
+  transition: background-color var(--motion-fast) var(--ease), color var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease);
+}
 /* Floats above the list on phones so it's reachable while scrolling; sticks to the top on wide screens. */
 .adm-bulkbar {
   position: fixed;
@@ -848,6 +862,9 @@ code {
 }
 .adm-input:focus {
   border-color: var(--ink);
+}
+.adm-input {
+  transition: border-color var(--motion-fast) var(--ease), box-shadow var(--motion-fast) var(--ease);
 }
 .adm-input[aria-invalid="true"] {
   border-color: var(--wine);
