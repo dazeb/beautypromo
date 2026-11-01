@@ -45,9 +45,7 @@ export function DealCard({ deal, now, onCopy, preview }: Props) {
     <li className="card" data-tone={deal.categories[0] ?? "makeup"}>
       <div className="card__swatch" aria-label={`${deal.retailer} offer artwork`}>
         <span className={`card__art card__art--${deal.categories[0] ?? "makeup"}`} aria-hidden="true">
-          <span className="card__art-orbit" />
           <span className="card__art-product"><span /></span>
-          <span className="card__art-shadow" />
         </span>
         <span className="card__retailer">{deal.retailer || "Retailer"}</span>
         <span className="card__headline">{deal.headline || "—"}</span>

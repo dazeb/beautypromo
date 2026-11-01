@@ -115,9 +115,9 @@ em {
   background: var(--blush);
   color: #8d275b;
   text-align: center;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  padding: 0.6rem var(--gutter);
+  font-size: 0.8rem;
+  letter-spacing: 0;
+  padding: 0.75rem var(--gutter);
 }
 .announce p {
   margin: 0;
@@ -138,8 +138,7 @@ em {
   justify-content: space-between;
   column-gap: 2rem;
   padding: 1rem var(--gutter) 0;
-  background: color-mix(in srgb, var(--ivory) 88%, transparent);
-  backdrop-filter: blur(12px);
+  background: var(--ivory);
   border-bottom: 1px solid var(--line);
 }
 
@@ -291,9 +290,7 @@ em {
   flex-direction: column-reverse;
 }
 .hero__stats dt {
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-size: 0.8rem;
   color: var(--muted);
 }
 .hero__stats dd {
@@ -301,6 +298,7 @@ em {
   font-family: var(--serif);
   font-size: 2rem;
   line-height: 1.1;
+  font-variant-numeric: lining-nums tabular-nums;
 }
 
 .hero__art {
@@ -308,49 +306,21 @@ em {
   isolation: isolate;
   height: clamp(15rem, 64vw, 22rem);
   overflow: hidden;
-  background: linear-gradient(145deg, #fff2f8 0%, #f5cde0 55%, #edb4d1 100%);
-  border: 1px solid #ecc5d8;
+  background: var(--paper);
+  border: 1px solid var(--line);
 }
-.hero-art__halo {
-  position: absolute;
-  width: 72%;
-  aspect-ratio: 1;
-  top: 3%;
-  left: 14%;
-  border: 1px solid #fff9ef99;
-  border-radius: 50%;
-  background: radial-gradient(circle at 40% 25%, #fff7eead, #f5ded283 48%, #d7aea500 72%);
-  box-shadow: 0 0 70px #fff3e76b;
-}
-.hero-art__overline,
 .hero-art__caption {
   position: absolute;
   z-index: 3;
-  color: #8d275b;
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  pointer-events: none;
-}
-.hero-art__overline {
-  top: 1.1rem;
-  left: 1.25rem;
-}
-.hero-art__caption {
   right: 0;
   bottom: 0;
   left: 0;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
   padding: 0.75rem 1.25rem;
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-  background: #fff0f8df;
-  border-top: 1px solid #dba5c0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: var(--ivory);
+  border-top: 1px solid var(--line);
+  pointer-events: none;
 }
 .hero-art__scene,
 .hero-art__fallback {
@@ -373,16 +343,15 @@ em {
   opacity: 0;
   visibility: hidden;
 }
+/* Flat stand-in for the 3D scene on small screens and without WebGL. */
 .hero-art__pedestal {
   position: absolute;
   left: 18%;
   right: 18%;
   bottom: 18%;
   height: 13%;
-  border: 2px solid #c3996a;
   border-radius: 50%;
-  background: linear-gradient(#ffe9f4 35%, #f2c2da 38%, #d88bb4 100%);
-  box-shadow: 0 1.2rem 1.5rem #713d3b55;
+  background: var(--blush);
 }
 .hero-art__bottle {
   position: absolute;
@@ -393,10 +362,8 @@ em {
   height: 49%;
   display: grid;
   place-items: center;
-  border: 1px solid #d78aaf;
   border-radius: 12% 12% 14% 14%;
-  background: linear-gradient(90deg, #dc94b6, #ffe4f2 20%, #f0b4d0 74%, #d784ac);
-  box-shadow: inset 0 0 1rem #fff6ee99, 0.8rem 1rem 1rem #63343c3d;
+  background: #f2c6da;
 }
 .hero-art__bottle::before {
   position: absolute;
@@ -405,23 +372,19 @@ em {
   height: 22%;
   bottom: 100%;
   border-radius: 10% 10% 3% 3%;
-  background: linear-gradient(90deg, #98683d, #f5dfaa 38%, #b68b56 80%);
-  box-shadow: 0 0.2rem 0 #a27850;
+  background: var(--gold);
 }
 .hero-art__bottle span {
   width: 72%;
   padding: 12% 2%;
-  border: 1px solid #bf9f81;
-  background: #fff2f9;
+  background: var(--ivory);
   color: var(--pink);
-  font: 0.6rem/0.8 var(--serif);
-  letter-spacing: 0.03em;
+  font: 0.7rem/0.8 var(--serif);
   text-align: center;
-  text-transform: uppercase;
 }
 .hero-art__bottle i {
   font-size: 1.1rem;
-  text-transform: lowercase;
+  font-style: normal;
 }
 .hero-art__lipstick {
   position: absolute;
@@ -432,8 +395,7 @@ em {
   height: 33%;
   transform: rotate(-13deg);
   border-radius: 5% 5% 8% 8%;
-  background: linear-gradient(90deg, #d88eb4, #ffe1f0 35%, #cb79a5 75%);
-  box-shadow: 0.5rem 0.7rem 0.7rem #63343c44;
+  background: #e391b6;
 }
 .hero-art__lipstick::before {
   position: absolute;
@@ -441,7 +403,7 @@ em {
   bottom: 100%;
   width: 100%;
   height: 18%;
-  background: linear-gradient(90deg, #a97a49, #f1d6a0 50%, #987040);
+  background: var(--gold);
 }
 .hero-art__lipstick span {
   position: absolute;
@@ -450,7 +412,7 @@ em {
   width: 64%;
   height: 45%;
   border-radius: 70% 35% 0 0;
-  background: linear-gradient(90deg, #da438f, #ff9ac9 50%, #cf3a81);
+  background: var(--pink);
 }
 .hero-art__compact {
   position: absolute;
@@ -461,16 +423,15 @@ em {
   aspect-ratio: 1;
   padding: 3%;
   border-radius: 50%;
-  background: linear-gradient(130deg, #f4deb1, #a67548 70%);
-  box-shadow: 0.5rem 0.8rem 0.8rem #63343c55;
+  background: #d8b98f;
   transform: rotate(15deg) scaleY(0.82);
 }
 .hero-art__compact span {
   display: block;
   height: 100%;
-  border: 1px solid #f4d6bd;
+  border: 1px solid var(--ivory);
   border-radius: 50%;
-  background: radial-gradient(circle at 32% 28%, #ffdbeb, #e791b8);
+  background: var(--blush);
 }
 /* ---------- Sections ---------- */
 
@@ -499,11 +460,11 @@ em {
 /* ---------- Featured ---------- */
 
 .featured {
-  padding-top: 0;
+  padding-top: clamp(3rem, 6vw, 4.5rem);
 }
 .featured__card {
   display: grid;
-  background: #fff2f8;
+  background: #fffdfa;
   color: var(--ink);
   border: 1px solid var(--line);
 }
@@ -514,24 +475,20 @@ em {
   align-items: center;
   text-align: center;
   padding: 2.5rem 1.5rem;
-  background:
-    radial-gradient(circle at 30% 20%, #fff3f9 0, transparent 55%),
-    radial-gradient(circle at 80% 90%, #f2bdd8 0, transparent 60%),
-    #f8d7e8;
+  background: var(--blush);
 }
 .featured__headline {
   font-family: var(--serif);
-  font-style: italic;
   font-size: clamp(4.5rem, 10vw, 7.5rem);
+  font-weight: 500;
   line-height: 0.9;
+  font-variant-numeric: lining-nums tabular-nums;
   color: var(--pink);
 }
 .featured__sub {
   margin-top: 0.75rem;
   max-width: 14rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-size: 0.85rem;
   color: var(--ink);
 }
 .featured__copy {
@@ -582,9 +539,9 @@ em {
 }
 .ending__time {
   font-family: var(--serif);
-  font-style: italic;
   font-size: 1.35rem;
-  color: var(--pink);
+  font-variant-numeric: lining-nums tabular-nums;
+  color: var(--ink);
 }
 .ending__sub {
   display: block;
@@ -602,10 +559,8 @@ em {
   align-items: center;
   min-height: var(--tap);
   padding-left: 0.75rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 500;
   text-decoration: none;
 }
 .ending__link:hover {
@@ -649,59 +604,43 @@ em {
   color: var(--ivory);
 }
 
-/* ---------- Retailer / brand showcase ---------- */
+/* ---------- Shop by brand ---------- */
 
 .brands__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem;
+  gap: 0.75rem;
+}
+@media (min-width: 64rem) {
+  .brands__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 .brand-tile {
-  position: relative;
   display: flex;
-  min-height: 8.5rem;
+  min-height: 8rem;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.1rem;
-  overflow: hidden;
+  gap: 1rem;
+  padding: 1.25rem;
   text-decoration: none;
-  color: #a12c67;
-  background: linear-gradient(145deg, #fff0f7, #f7deeb);
+  background: #fffdfa;
   border: 1px solid var(--line);
-  transition: transform var(--motion-base) var(--ease), box-shadow var(--motion-base) var(--ease);
+  transition: border-color var(--motion-base) var(--ease);
 }
-.brand-tile:nth-child(3n + 2) { color: #3f4a35; background: linear-gradient(145deg, #edf0e7, #d6dfd0); }
-.brand-tile:nth-child(3n) { color: #4b2f52; background: linear-gradient(145deg, #eee5ef, #d9c9df); }
-.brand-tile:hover { transform: translateY(-3px); box-shadow: 0 14px 28px -22px #3c1e14aa; }
+@media (hover: hover) {
+  .brand-tile:hover { border-color: var(--pink); }
+}
+.brand-tile:focus-visible { border-color: var(--pink); }
 .brand-tile__wordmark {
-  position: relative;
-  z-index: 1;
   max-width: 12ch;
-  font: 500 clamp(1.25rem, 2vw, 1.8rem)/1 var(--serif);
+  font: 500 clamp(1.25rem, 2vw, 1.6rem)/1.05 var(--serif);
   overflow-wrap: anywhere;
 }
 .brand-tile__offer {
-  position: relative;
-  z-index: 1;
-  font-size: 0.75rem;
-  letter-spacing: 0;
-}
-.brand-tile__orb {
-  position: absolute;
-  width: 7rem;
-  aspect-ratio: 1;
-  right: -1.2rem;
-  top: 1.5rem;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  opacity: 0.18;
-}
-.brand-tile__orb::after {
-  content: "";
-  position: absolute;
-  inset: 1rem;
-  border: 1px solid currentColor;
-  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--muted);
 }
 
 /* ---------- Deal cards ---------- */
@@ -716,94 +655,46 @@ em {
 }
 
 .card {
-  --tone-a: #fff0f7;
-  --tone-b: #f7deeb;
-  --tone-ink: #a12c67;
   display: flex;
   flex-direction: column;
   background: #fffdfa;
   border: 1px solid var(--line);
-  transition: transform var(--motion-base) var(--ease), box-shadow var(--motion-base) var(--ease);
+  transition: border-color var(--motion-base) var(--ease);
 }
 @media (hover: hover) {
-  .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px -20px rgba(31, 26, 23, 0.25);
-  }
+  .card:hover { border-color: #cdb1c0; }
 }
-
-.card[data-tone="skincare"] {
-  --tone-a: #eef0e6;
-  --tone-b: #d6dcc8;
-  --tone-ink: #3f4a35;
-}
-.card[data-tone="fragrance"] {
-  --tone-a: #efe6f0;
-  --tone-b: #d9c7dc;
-  --tone-ink: #4b2f52;
-}
-.card[data-tone="gift"] {
-  --tone-a: #f4ead9;
-  --tone-b: #e2cfab;
-  --tone-ink: #6b4f22;
-}
-.card[data-tone="code"] {
-  --tone-a: #e8ecef;
-  --tone-b: #cdd6dc;
-  --tone-ink: #2c3e4c;
-}
+.card:focus-within { border-color: #cdb1c0; }
 
 .card__swatch {
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 15rem;
-  padding: 1.4rem 1.5rem;
-  background: linear-gradient(150deg, var(--tone-a), var(--tone-b));
-  color: var(--tone-ink);
+  padding: 1.5rem;
+  background: var(--paper);
+  color: var(--ink);
   overflow: hidden;
   isolation: isolate;
-}
-.card__swatch::after {
-  content: "";
-  position: absolute;
-  right: -3.5rem;
-  bottom: -3.5rem;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  border: 1px solid currentColor;
-  opacity: 0.18;
 }
 .card__art {
   position: absolute;
   inset: 0;
   display: grid;
   place-items: center;
-  overflow: hidden;
-  opacity: 0.92;
   pointer-events: none;
-}
-.card__art-orbit {
-  position: absolute;
-  width: 11rem;
-  aspect-ratio: 1;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  opacity: 0.24;
 }
 .card__art-product {
   position: relative;
   z-index: 1;
   width: 4.4rem;
   height: 7.3rem;
+  margin-left: 24%;
+  border: 1px solid #d8a9c0;
+  border-radius: 0.8rem 0.8rem 1.1rem 1.1rem;
+  background: #ebc9da;
   display: grid;
   place-items: center;
-  border: 1px solid #fff9;
-  border-radius: 0.8rem 0.8rem 1.1rem 1.1rem;
-  background: linear-gradient(100deg, #dd9bbd, #ffe5f1 25%, #eeb8d1 72%, #d789b1);
-  box-shadow: 0.5rem 0.8rem 1.2rem #884f7122, inset 0 0 1rem #fff6;
-  transform: rotate(-7deg);
 }
 .card__art-product::before {
   content: "";
@@ -812,31 +703,21 @@ em {
   height: 1.2rem;
   bottom: 100%;
   border-radius: 0.15rem 0.15rem 0 0;
-  background: linear-gradient(90deg, #8a683f, #f0d7a3, #9b7445);
+  background: var(--gold);
 }
 .card__art-product span {
   width: 78%;
   height: 34%;
-  border: 1px solid #fff9;
-  background: #f6e8dcaa;
+  background: var(--ivory);
 }
-.card__art-shadow {
-  position: absolute;
-  width: 9rem;
-  height: 1.2rem;
-  bottom: 1.3rem;
-  border-radius: 50%;
-  background: #98507822;
-  filter: blur(0.5rem);
-}
-.card__art--skincare .card__art-product { width: 3.8rem; height: 7.7rem; border-radius: 0.5rem; background: linear-gradient(100deg, #77836a, #e8ead9 28%, #b9c3a8 75%, #66745e); }
-.card__art--fragrance .card__art-product { width: 5.2rem; height: 6.2rem; border-radius: 1.2rem 1.2rem 0.7rem 0.7rem; background: linear-gradient(100deg, #8b6a8e, #f1ddec 28%, #b99bbc 75%, #6c4c70); }
-.card__art--gift .card__art-product { width: 6.8rem; height: 5.2rem; border-radius: 0.2rem; background: linear-gradient(100deg, #ad8951, #f4e5bd 28%, #d5b77e 75%, #8b6c3e); }
-.card__art--code .card__art-product { width: 5.8rem; height: 5.8rem; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #f4d8ca, #bd8b85 70%); }
+.card__art--skincare .card__art-product { width: 3.8rem; height: 7.7rem; border-radius: 0.5rem; }
+.card__art--fragrance .card__art-product { width: 5.2rem; height: 6.2rem; border-radius: 1.2rem 1.2rem 0.7rem 0.7rem; }
+.card__art--gift .card__art-product { width: 6.8rem; height: 5.2rem; border-radius: 0.2rem; }
+.card__art--code .card__art-product { width: 5.8rem; height: 5.8rem; border-radius: 50%; }
 .card__retailer, .card__headline, .card__sub { position: relative; z-index: 2; }
 
 .card__retailer {
-  font: 500 1.45rem/1.15 var(--serif);
+  font: 500 1.4rem/1.15 var(--serif);
   letter-spacing: 0;
 }
 .card__headline {
@@ -847,20 +728,20 @@ em {
   line-height: 0.95;
 }
 .card__sub {
-  margin-top: 0.45rem;
+  margin-top: 0.5rem;
   font-size: 0.85rem;
-  opacity: 0.85;
+  color: var(--muted);
 }
 
 .card__body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 1.4rem 1.5rem 1.25rem;
+  padding: 1.5rem;
 }
 .card__title {
   font-size: 1.55rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
 }
 .card__details {
   margin: 0 0 1rem;
@@ -882,18 +763,19 @@ em {
   border-top: 1px solid var(--line);
 }
 .card__ends {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
 .card__ends--soon {
   color: var(--pink);
-  font-weight: 600;
+  font-weight: 500;
 }
 .card__link {
   display: inline-flex;
   align-items: center;
   min-height: var(--tap);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0;
   text-decoration: none;
@@ -920,15 +802,13 @@ em {
   align-items: center;
   padding: 0.5rem 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
 }
 .code__action {
   display: flex;
   align-items: center;
   padding: 0 0.85rem;
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-size: 0.8rem;
   background: var(--paper);
   border-left: 1px dashed var(--gold);
   transition: background-color var(--motion-fast) var(--ease);
@@ -939,7 +819,6 @@ em {
 
 .empty {
   color: var(--muted);
-  font-style: italic;
 }
 
 /* ---------- Advent ---------- */
@@ -962,8 +841,8 @@ em {
 }
 .advent__rank {
   font-family: var(--serif);
-  font-style: italic;
   font-size: 1.2rem;
+  font-variant-numeric: lining-nums tabular-nums;
   color: var(--gold-text);
 }
 .advent__info {
@@ -984,11 +863,12 @@ em {
 .advent__price {
   font-size: 0.82rem;
   color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
 .advent__bar {
   position: relative;
   height: 2px;
-  margin-top: 0.55rem;
+  margin-top: 0.75rem;
   background: var(--line);
 }
 .advent__bar::after {
@@ -996,19 +876,18 @@ em {
   position: absolute;
   inset: 0 auto 0 0;
   width: var(--w);
-  background: linear-gradient(90deg, var(--rose), var(--pink));
+  background: var(--pink);
 }
 .advent__saving {
   font-family: var(--serif);
   font-size: 2rem;
   line-height: 1;
-  color: var(--pink);
+  font-variant-numeric: lining-nums tabular-nums;
+  color: var(--ink);
 }
 .advent__saving small {
   font-family: var(--sans);
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 0.8rem;
   margin-left: 0.2rem;
   color: var(--muted);
 }
@@ -1033,17 +912,15 @@ em {
   background: var(--ivory);
 }
 .dates__day {
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold-text);
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 .dates__day span {
   display: block;
   font-family: var(--serif);
   font-size: 3.6rem;
   line-height: 1;
-  letter-spacing: 0;
+  font-variant-numeric: lining-nums tabular-nums;
   color: var(--ink);
 }
 .dates__item h3 {
@@ -1075,10 +952,10 @@ em {
   background: #f4edf1;
 }
 .journal__topics span {
-  padding: 0.2rem 0.8rem;
+  padding: 0.25rem 0.75rem;
   border: 1px solid #acb09e;
   color: #505947;
-  font: italic 1.5rem var(--serif);
+  font: 400 1.25rem var(--serif);
 }
 .journal__copy { padding: clamp(1.5rem, 3vw, 2.5rem); }
 .journal__copy h3 { font-size: 2rem; }
@@ -1145,9 +1022,8 @@ em {
 .newsletter__done {
   margin: 0;
   font-family: var(--serif);
-  font-style: italic;
   font-size: 1.5rem;
-  color: var(--pink);
+  color: var(--ink);
 }
 
 /* ---------- Footer ---------- */
@@ -1171,14 +1047,12 @@ em {
 }
 .site-footer__fine {
   margin: 0;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
+  font-size: 0.8rem;
   color: var(--faint);
 }
 .site-footer__version {
   margin: 1rem 0 0;
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
+  font-size: 0.75rem;
   color: var(--faint);
 }
 .site-footer__amp {
@@ -1212,32 +1086,7 @@ em {
   transform: translate(-50%, 0);
 }
 
-/* Product motion stays inside the artwork; the brand and offer remain readable. */
-.brand-tile__bottle {
-  position: absolute;
-  right: 0.8rem;
-  bottom: 1.1rem;
-  width: 2.5rem;
-  height: 4rem;
-  border: 1px solid currentColor;
-  border-radius: 0.35rem;
-  background: #fff4;
-  opacity: 0.22;
-  transform: rotate(10deg);
-  animation: product-float 6s ease-in-out infinite;
-}
-.brand-tile__bottle::before {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 25%;
-  width: 50%;
-  height: 0.65rem;
-  border: 1px solid currentColor;
-  background: #fff7;
-}
-.brand-tile__wordmark { font-size: clamp(1.1rem, 2.1vw, 1.75rem); }
-.brand-tile__offer { display: inline-flex; align-items: center; gap: 0.35rem; }
+/* Hover and focus change colour or nudge an arrow. Nothing floats or loops. */
 .brand-tile__offer > span,
 .card__link > span[aria-hidden],
 .btn > span[aria-hidden] {
@@ -1246,58 +1095,9 @@ em {
 }
 .brand-tile:is(:hover, :focus-visible) .brand-tile__offer > span,
 .card__link:is(:hover, :focus-visible) > span[aria-hidden],
-.btn:is(:hover, :focus-visible) > span[aria-hidden] { transform: translateX(4px); }
-.card__art-product {
-  margin-left: 24%;
-  animation: product-float 6s ease-in-out infinite;
-  animation-delay: var(--float-delay, 0s);
-  transition: transform 500ms var(--ease);
+.btn:is(:hover, :focus-visible) > span[aria-hidden] {
+  transform: translateX(4px);
 }
-.card__art-shadow {
-  animation: product-shadow 6s ease-in-out infinite;
-  animation-delay: var(--float-delay, 0s);
-}
-.card__art-orbit,
-.brand-tile__orb { transition: rotate 700ms var(--ease); }
-.card:is(:hover, :focus-within) .card__art-orbit,
-.brand-tile:is(:hover, :focus-visible) .brand-tile__orb { rotate: 18deg; }
-.card__art-orbit::before,
-.brand-tile__orb::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: calc(50% - 2px);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: currentColor;
-}
-.card:nth-child(3n + 2), .brand-tile:nth-child(3n + 2) { --float-delay: -2s; }
-.card:nth-child(3n), .brand-tile:nth-child(3n) { --float-delay: -4s; }
-.brand-tile__bottle { animation-delay: var(--float-delay, 0s); }
-.hero-art__bottle, .hero-art__lipstick, .hero-art__compact { animation: product-float 7s ease-in-out infinite; }
-.hero-art__lipstick { animation-delay: -2s; }
-.hero-art__compact { animation-delay: -4s; }
-.hero__art[data-scene-ready="true"] .hero-art__fallback > * { animation-play-state: paused; }
-.motion-observed .card:not(.is-in-view) .card__art-product,
-.motion-observed .card:not(.is-in-view) .card__art-shadow,
-.motion-observed .card:not(.is-in-view) .card__art-orbit,
-.motion-observed .brand-tile:not(.is-in-view) .brand-tile__orb,
-.motion-observed .brand-tile:not(.is-in-view) .brand-tile__bottle { animation-play-state: paused; }
-@media (hover: hover) {
-  .card:hover .card__art-product { transform: rotate(-4deg) scale(1.04); }
-  .brand-tile:hover { transform: translateY(-5px); }
-}
-.card:focus-within { box-shadow: 0 12px 24px -20px #1f1a1740; }
-@keyframes product-float {
-  0%, 100% { translate: 0 0; }
-  50% { translate: 0 -9px; }
-}
-@keyframes product-shadow {
-  0%, 100% { scale: 1; opacity: 0.7; }
-  50% { scale: 0.88; opacity: 0.4; }
-}
-@media (min-width: 64rem) { .brands__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
 /* ---------- Wider screens (mobile first: everything above is the phone layout) ---------- */
 

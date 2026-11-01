@@ -93,7 +93,7 @@ export function App({ data }: { data: PublicData }) {
           <div className="hero__copy">
             <p className="eyebrow hero__eyebrow"><span /> beautypromos</p>
             <h1>
-              Beauty offers,<br /><em>in one place.</em>
+              Beauty offers,<br /><em>in one place</em>
             </h1>
             <p className="hero__lede">
               Makeup, skincare and fragrance from the brands you know. Check the details, then shop with the retailer.
