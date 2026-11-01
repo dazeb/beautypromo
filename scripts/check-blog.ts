@@ -38,8 +38,12 @@ test("article is readable without application JavaScript and has complete metada
   assert.ok(document.includes('property="og:type" content="article"'));
   assert.ok(!document.includes('type="module"'));
   const scripts = [...document.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)];
-  assert.equal(scripts.length, 1);
-  const schema = JSON.parse(scripts[0][1]);
+  const skimlinks = 'src="https://s.skimresources.com/js/312095X1800668.skimlinks.js"';
+  assert.equal(scripts.filter((script) => script[0].includes(skimlinks)).length, 1);
+  const inline = scripts.filter((script) => !script[0].includes("src="));
+  assert.equal(inline.length, 1);
+  assert.equal(scripts.length, 2);
+  const schema = JSON.parse(inline[0][1]);
   assert.equal(schema["@type"], "BlogPosting");
   assert.equal(schema.headline, BLOG_POST.title);
   assert.equal(schema.datePublished, BLOG_POST.published);
