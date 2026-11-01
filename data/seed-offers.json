@@ -738,5 +738,91 @@
     "featured": false,
     "status": "published",
     "verifiedAt": "2026-11-01T12:00:00Z"
+  },
+  {
+    "slug": "code-lookfantastic-flash22",
+    "retailer": "Lookfantastic",
+    "title": "Lookfantastic: 22% off selected with code FLASH22",
+    "headline": "22% off",
+    "sub": "selected, with code FLASH22",
+    "details": "22% off selected products at Lookfantastic with the code FLASH22.",
+    "categories": [
+      "code"
+    ],
+    "code": "FLASH22",
+    "terms": "UK only. Selected products only. Runs to 31 Dec 2026. Lookfantastic terms apply; check the final price at checkout.",
+    "url": "https://www.lookfantastic.com/c/offers/offers/app/v1/?skimoffer=3933708",
+    "price": null,
+    "worth": null,
+    "note": "Selected products",
+    "endsAt": "2026-12-31T23:59:00Z",
+    "featured": false,
+    "status": "published",
+    "verifiedAt": "2026-11-01T12:00:00Z"
+  },
+  {
+    "slug": "code-lookfantastic-save",
+    "retailer": "Lookfantastic",
+    "title": "Lookfantastic: up to 20% off selected with code SAVE",
+    "headline": "Up to 20% off",
+    "sub": "selected, with code SAVE",
+    "details": "Up to 20% off selected products at Lookfantastic with the code SAVE.",
+    "categories": [
+      "code"
+    ],
+    "code": "SAVE",
+    "terms": "UK only. Selected products only. Runs to 31 Dec 2026. Lookfantastic terms apply; check the final price at checkout.",
+    "url": "https://www.lookfantastic.com/c/offers/tiered/?skimoffer=3933707",
+    "price": null,
+    "worth": null,
+    "note": "Selected products",
+    "endsAt": "2026-12-31T23:59:00Z",
+    "featured": false,
+    "status": "published",
+    "verifiedAt": "2026-11-01T12:00:00Z"
+  },
+  {
+    "slug": "code-beautifiedyou-obagi15",
+    "retailer": "BeautifiedYou",
+    "title": "BeautifiedYou.com: 15% off Obagi with code OBAGI15",
+    "headline": "15% off Obagi",
+    "sub": "with code OBAGI15",
+    "details": "Take 15% off Obagi at BeautifiedYou.com with the code OBAGI15.",
+    "categories": [
+      "skincare",
+      "code"
+    ],
+    "code": "OBAGI15",
+    "terms": "BeautifiedYou.com is a US-based store, so check delivery to the UK, the final price and any exclusions at checkout.",
+    "url": "https://www.beautifiedyou.com/obagi?skimoffer=3919133",
+    "price": null,
+    "worth": null,
+    "note": "Obagi only",
+    "endsAt": null,
+    "featured": false,
+    "status": "published",
+    "verifiedAt": "2026-11-01T12:00:00Z"
+  },
+  {
+    "slug": "code-gatineau-welcome15",
+    "retailer": "Gatineau",
+    "title": "Gatineau: first-order discount with code GATINEAUWELCOME15",
+    "headline": "First order",
+    "sub": "discount with code GATINEAUWELCOME15",
+    "details": "A discount on your first Gatineau order with the code GATINEAUWELCOME15. The code name and headline say 15%, while the full terms say 10%, so check the discount at checkout.",
+    "categories": [
+      "skincare",
+      "code"
+    ],
+    "code": "GATINEAUWELCOME15",
+    "terms": "UK only. First order only; cannot be combined with other codes or discounts; while stocks last. Runs to 17 Dec 2026. The offer is listed as both 15% and 10% off, so check the final price at checkout.",
+    "url": "https://gatineau.com/?skimoffer=3944887",
+    "price": null,
+    "worth": null,
+    "note": "First order only",
+    "endsAt": "2026-12-17T23:59:00Z",
+    "featured": false,
+    "status": "published",
+    "verifiedAt": "2026-11-01T12:00:00Z"
   }
 ]
