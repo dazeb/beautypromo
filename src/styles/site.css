@@ -302,6 +302,9 @@ em {
 }
 
 .hero__art {
+  --caption: 2.75rem;
+  --lipstick: #c8325f;
+  --lipstick-case: #34282d;
   position: relative;
   isolation: isolate;
   height: clamp(15rem, 64vw, 22rem);
@@ -309,13 +312,27 @@ em {
   background: var(--paper);
   border: 1px solid var(--line);
 }
+.hero__art::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: var(--caption);
+  width: 64%;
+  height: calc(100% - var(--caption) - 2rem);
+  border-radius: 999px 999px 0 0;
+  background: var(--blush);
+  transform: translateX(-50%);
+}
 .hero-art__caption {
   position: absolute;
   z-index: 3;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  height: var(--caption);
+  padding: 0 1.25rem;
   font-size: 0.8rem;
   color: var(--muted);
   background: var(--ivory);
@@ -325,7 +342,7 @@ em {
 .hero-art__scene,
 .hero-art__fallback {
   position: absolute;
-  inset: 0;
+  inset: 0 0 var(--caption);
   transition: opacity var(--motion-slow) var(--ease);
 }
 .hero-art__scene {
@@ -351,7 +368,8 @@ em {
   bottom: 18%;
   height: 13%;
   border-radius: 50%;
-  background: var(--blush);
+  background: #ecd2c0;
+  box-shadow: 0 0.4rem 0 #e8a0bf;
 }
 .hero-art__bottle {
   position: absolute;
@@ -393,9 +411,8 @@ em {
   bottom: 27%;
   width: 9%;
   height: 33%;
-  transform: rotate(-13deg);
   border-radius: 5% 5% 8% 8%;
-  background: #e391b6;
+  background: var(--lipstick-case);
 }
 .hero-art__lipstick::before {
   position: absolute;
@@ -412,7 +429,7 @@ em {
   width: 64%;
   height: 45%;
   border-radius: 70% 35% 0 0;
-  background: var(--pink);
+  background: var(--lipstick);
 }
 .hero-art__compact {
   position: absolute;
