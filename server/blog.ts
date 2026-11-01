@@ -115,6 +115,7 @@ function renderBlog(isArticle: boolean, version: string, data: PublicData) {
     ${isArticle && related.length ? html`<section class="related" aria-labelledby="related-title"><div class="section-head"><p class="eyebrow">Continue exploring</p><h2 id="related-title">From the current edit</h2></div><ul>${related.map((deal) => html`<li><p class="eyebrow">${deal.retailer}</p><h3>${deal.title}</h3><p>${deal.headline} ${deal.sub}</p><a class="text-link" href="/#deals">View the current offers <span aria-hidden="true">↗</span></a></li>`)}</ul></section>` : ""}
   </main>
   <footer class="footer"><a class="logo" href="/"><img src="/beautypromos-logo.png" alt="beautypromos — The Beauty Edit" width="2172" height="724" loading="lazy"></a><p>Independent beauty finds. Some links are affiliate links; offers, stock and terms can change. Check the retailer’s final price and regional eligibility before buying.</p><nav aria-label="Footer"><a href="/#deals">Explore the offers</a><a href="/blog/">The journal</a><a href="/amp/">AMP offers</a></nav><p class="version">Version ${version}</p></footer>
+  <script type="text/javascript" src="https://s.skimresources.com/js/312095X1800668.skimlinks.js"></script>
 </body>
 </html>`).replace("</head>", `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script></head>`);
 }
