@@ -1,5 +1,115 @@
 [
   {
+    "date": "2026-11-01",
+    "label": "No7 25 Days of Beauty, £65",
+    "note": "Contents valued at about £249 by the retailer. On sale now at Boots and No7."
+  },
+  {
+    "date": "2026-11-02",
+    "label": "M&S Beauty Advent Calendar, £75",
+    "note": "M&S values the contents at over £450; reviewers put them nearer £400. Launched 13 October."
+  },
+  {
+    "date": "2026-11-03",
+    "label": "Lookfantastic Beauty Advent Calendar, £120",
+    "note": "Contents valued at over £665 by Lookfantastic. Sales opened 1 September."
+  },
+  {
+    "date": "2026-11-04",
+    "label": "Boots 24 Days of Luxe Beauty Advent Calendar, £150",
+    "note": "Boots values the contents at £709.59 across 27 products. Brands include Estée Lauder, NARS, Benefit, Huda Beauty and Fenty."
+  },
+  {
+    "date": "2026-11-05",
+    "label": "Superdrug 24 Days of Beauty, £60",
+    "note": "Skincare calendar. Superdrug values the contents at over £160. Online only, with a waitlist open and no release date confirmed."
+  },
+  {
+    "date": "2026-11-06",
+    "label": "Aldi Lacura Beauty Advent Calendar, £19.99",
+    "note": "Twelve days of skincare, make-up and haircare, about £1.60 a day. In-store only; the 2026 edition includes an exclusive lip gloss."
+  },
+  {
+    "date": "2026-11-07",
+    "label": "Glossybox Beauty Advent Calendar, £90",
+    "note": "Money Saving Expert estimates about £547 of beauty inside, an 84% saving. Check the price before you buy."
+  },
+  {
+    "date": "2026-11-08",
+    "label": "Avant Beauty Advent Calendar, £109",
+    "note": "Money Saving Expert estimates about £699 of Avant beauty products, an 84% saving."
+  },
+  {
+    "date": "2026-11-09",
+    "label": "Space NK Beauty Advent Calendar, £275",
+    "note": "35 products worth over £1,200 by Space NK's valuation, 26 of them full-size. Waitlist is first come, first served; the 2025 edition sold out within 2.5 weeks."
+  },
+  {
+    "date": "2026-11-10",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-11",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-12",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-13",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-14",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-15",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-16",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-17",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-18",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-19",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-20",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-21",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-22",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
     "date": "2026-11-23",
     "label": "Advent calendar markdowns",
     "note": "Calendars are usually discounted late. Watch from this week."
@@ -10,13 +120,158 @@
     "note": "Free shipping for Beauty Squad members."
   },
   {
+    "date": "2026-11-25",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-26",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
     "date": "2026-11-27",
     "label": "Black Friday",
     "note": "The main event at Boots, Superdrug, Space NK, Sephora and Lookfantastic."
   },
   {
+    "date": "2026-11-28",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-11-29",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
     "date": "2026-11-30",
     "label": "Cyber Monday",
     "note": "Last call before festive prices return."
+  },
+  {
+    "date": "2026-12-01",
+    "label": "Boots Star Gifts, new each week",
+    "note": "New Star Gifts arrive weekly through the festive season, and once they're gone they're gone. The 3-for-2 on selected gifts runs alongside them."
+  },
+  {
+    "date": "2026-12-02",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-03",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-04",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-05",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-06",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-07",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-08",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-09",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-10",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-11",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-12",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-13",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-14",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-15",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-16",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-17",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-18",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-19",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-20",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-21",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-22",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-23",
+    "label": "Last day for Boots online Christmas orders",
+    "note": "Boots online Christmas ordering runs until 23 December. Around 500 stores offer rapid delivery through Deliveroo or Uber Eats."
+  },
+  {
+    "date": "2026-12-24",
+    "label": "Christmas countdown",
+    "note": "Offers here change often, so check the current price before you buy."
+  },
+  {
+    "date": "2026-12-25",
+    "label": "Christmas Day",
+    "note": "The countdown ends here."
   }
 ]
