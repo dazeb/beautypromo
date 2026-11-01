@@ -138,6 +138,29 @@ test("sitemap lists only indexable canonical pages and robots advertises it", as
   assert.ok(!directives.includes("Disallow:"));
 });
 
+test("llms.txt is served as plain text and robots points agents to it", async () => {
+  const response = await site.request("/llms.txt");
+  assert.equal(response.status, 200);
+  assert.match(response.headers.get("Content-Type")!, /text\/plain/);
+  assert.match(await response.text(), /^# beautypromos — The Beauty Edit/m);
+  const robots = await site.request("/robots.txt");
+  assert.ok((await robots.text()).includes("https://beautypromos.deals/llms.txt"));
+});
+
+test("llms.txt lists live offers with codes, terms and tracked links", async () => {
+  const { renderLlms } = await import("../server/llms.ts");
+  const deal = {
+    slug: "space-nk-gift", retailer: "Space NK", title: "The Beauty Insider Gift", headline: "Free", sub: "a 29-piece gift",
+    details: "", categories: ["gift"], code: "GIFT29", terms: "While stocks last.", price: null, worth: null, note: null,
+    endsAt: null, featured: true, verifiedAt: "2026-10-31T10:00:00Z",
+  };
+  const text = renderLlms({ deals: [deal], dates: [], verifiedOn: "2026-10-31T10:00:00Z" });
+  assert.match(text, /1 live offer from 1 retailer, last checked 31 October 2026/);
+  assert.ok(text.includes("- [Space NK: The Beauty Insider Gift](https://beautypromos.deals/go/space-nk-gift?s=llms): Featured · Free a 29-piece gift · Code GIFT29 · No end date"));
+  assert.ok(text.includes("  Terms: While stocks last."));
+  assert.ok(!text.includes("## Advent calendars"));
+});
+
 test("sharing image is a served 1200 by 630 PNG", async () => {
   const response = await site.request("/social-card.png");
   assert.equal(response.status, 200);
