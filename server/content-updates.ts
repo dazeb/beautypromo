@@ -7,6 +7,12 @@ const updates = [
   { id: "2026-11-01-dior-us-gift-set", offerSlug: "dior-us-beauty-care-ritual-gift-set", retailers: ["Dior (US)"] },
   { id: "2026-11-01-dior-us-rouge-sequin-duo", offerSlug: "dior-us-rouge-sequin-liquid-duo", retailers: [] },
   { id: "2026-11-01-nails-inc-advent", offerSlug: "advent-nails-inc", retailers: ["Nails.INC"] },
+  { id: "2026-11-01-beautifiedyou-biotreats", offerSlug: "code-beautifiedyou-biotreats", retailers: ["BeautifiedYou"] },
+  { id: "2026-11-01-prettylittlething-uk12plt", offerSlug: "code-prettylittlething-uk12plt", retailers: ["PrettyLittleThing"] },
+  { id: "2026-11-01-lookfantastic-flash22", offerSlug: "code-lookfantastic-flash22", retailers: [] },
+  { id: "2026-11-01-lookfantastic-save", offerSlug: "code-lookfantastic-save", retailers: [] },
+  { id: "2026-11-01-beautifiedyou-obagi15", offerSlug: "code-beautifiedyou-obagi15", retailers: [] },
+  { id: "2026-11-01-gatineau-welcome15", offerSlug: "code-gatineau-welcome15", retailers: ["Gatineau"] },
 ];
 
 /** Apply the requested campaigns once; later edits in the admin remain authoritative. */
