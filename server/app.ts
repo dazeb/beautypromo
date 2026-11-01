@@ -4,6 +4,7 @@ import type { Dashboard, PublicData, PublicDeal } from "../src/shared/types.ts";
 import { authReady, clientIp, endSession, isAdmin, loginAllowed, passwordMatches, requireAdmin, startSession } from "./auth.ts";
 import { db, toDeal, toKeyDate, toRetailer, toSubscriber, upsertDeal } from "./db.ts";
 import { dealSchema, emailSchema, fieldErrors, keyDateSchema, retailerLinkSchema, retailerSchema } from "./validation.ts";
+import type { AmpData } from "./amp.ts";
 
 const nowIso = () => new Date().toISOString();
 const LIVE = `status = 'published' AND (ends_at IS NULL OR ends_at > ?)`;
@@ -43,6 +44,29 @@ export function publicData(): PublicData {
   const dates = db().prepare(`SELECT * FROM key_dates WHERE date >= ? ORDER BY date`).all(now.slice(0, 10)).map(toKeyDate);
   const verifiedOn = deals.reduce<string | null>((max, d) => (d.verifiedAt && (!max || d.verifiedAt > max) ? d.verifiedAt : max), null);
   return { deals: deals.map(toPublic), dates, verifiedOn };
+}
+
+/** Direct retailer URLs let AMP Skimlinks monetise offers without an existing affiliate link. */
+export function publicAmpData(): AmpData {
+  const data = publicData();
+  const rows = db().prepare(`SELECT slug, url, affiliate_url FROM deals WHERE ${LIVE}`).all(nowIso());
+  const destinations = new Map(rows.map((row) => [String(row.slug), row]));
+  return {
+    ...data,
+    deals: data.deals.flatMap((deal) => {
+      const row = destinations.get(deal.slug);
+      if (!row) return [];
+      const managedAffiliate = row.affiliate_url || deal.retailer.trim().toLocaleLowerCase("en") === "estée lauder";
+      if (managedAffiliate) return [{ ...deal, href: `https://beautypromos.deals/go/${encodeURIComponent(deal.slug)}?s=amp` }];
+      try {
+        const destination = new URL(String(row.url));
+        if (destination.protocol !== "https:" && destination.protocol !== "http:") return [];
+        return [{ ...deal, href: destination.href }];
+      } catch {
+        return [];
+      }
+    }),
+  };
 }
 
 const BOT_UA = /bot|crawl|spider|slurp|preview|facebookexternalhit|headless|monitor|curl|wget/i;

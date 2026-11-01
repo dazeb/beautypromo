@@ -54,6 +54,8 @@ test("public metadata is complete in the initial HTML without JavaScript", async
   assert.match(document, /<html lang="en-GB">/);
   assert.equal([...document.matchAll(/<link rel="canonical" /g)].length, 1);
   assert.ok(document.includes(`<link rel="canonical" href="${canonical}"`));
+  assert.ok(document.includes(`<link rel="amphtml" href="${canonical}amp/"`));
+  assert.ok(!document.includes("amp-skimlinks"));
   assert.match(document, /<link rel="sitemap" type="application\/xml" href="\/sitemap.xml"/);
   assert.match(document, /window\.__LUMIERE__=/);
 });

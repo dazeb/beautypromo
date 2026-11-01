@@ -19,6 +19,8 @@ function buildVersion() {
   }
 }
 
+const appVersion = buildVersion();
+
 /** In dev, serve the Hono API and click tracker from the Vite server, and route /admin/* to the admin SPA. */
 function api(): Plugin {
   return {
@@ -26,8 +28,23 @@ function api(): Plugin {
     configureServer(server) {
       server.middlewares.use(async (req, res, next) => {
         const path = req.url?.split("?")[0] ?? "";
-        if (path.startsWith("/api/") || path.startsWith("/go/")) {
+        if (path === "/amp" || path === "/amp/" || path.startsWith("/api/") || path.startsWith("/go/")) {
           await server.ssrLoadModule("/server/env.ts");
+          const { applyContentUpdates } = await server.ssrLoadModule("/server/content-updates.ts");
+          applyContentUpdates();
+        }
+        if (path === "/amp" || path === "/amp/") {
+          if (path === "/amp") {
+            res.writeHead(301, { Location: "/amp/" }).end();
+            return;
+          }
+          const { publicAmpData } = await server.ssrLoadModule("/server/app.ts");
+          const { renderAmp } = await server.ssrLoadModule("/server/amp.ts");
+          res.setHeader("Content-Type", "text/html; charset=utf-8");
+          res.end(renderAmp(publicAmpData(), appVersion));
+          return;
+        }
+        if (path.startsWith("/api/") || path.startsWith("/go/")) {
           const { app } = await server.ssrLoadModule("/server/app.ts");
           return getRequestListener(app.fetch)(req, res);
         }
@@ -44,9 +61,14 @@ function api(): Plugin {
 
 export default defineConfig({
   define: {
-    __APP_VERSION__: JSON.stringify(buildVersion()),
+    __APP_VERSION__: JSON.stringify(appVersion),
   },
-  plugins: [react(), api()],
+  plugins: [react(), api(), {
+    name: "build-version",
+    generateBundle() {
+      this.emitFile({ type: "asset", fileName: "version.json", source: JSON.stringify({ version: appVersion }) });
+    },
+  }],
   build: {
     rollupOptions: {
       input: { site: "index.html", admin: "admin/index.html" },

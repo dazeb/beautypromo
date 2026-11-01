@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit",
     "check:affiliates": "node --test scripts/check-affiliates.ts",
     "check:seo": "pnpm build && node --test scripts/check-seo.ts",
+    "check:amp": "pnpm build && node --test scripts/check-amp.ts",
     "deploy": "scripts/deploy.sh",
     "go-live": "scripts/go-live-domain.sh"
   },

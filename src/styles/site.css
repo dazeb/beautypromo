@@ -1188,6 +1188,14 @@ em {
   letter-spacing: 0.06em;
   color: var(--faint);
 }
+.site-footer__amp {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--wine);
+}
 
 /* ---------- Toast ---------- */
 

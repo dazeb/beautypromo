@@ -49,6 +49,16 @@ Submit **https://beautypromos.deals/sitemap.xml** in Bing Webmaster Tools or Goo
 
 Run `pnpm check:seo` to build and check page metadata, structured data, sitemap coverage, robots directives and the sharing image against an isolated temporary database.
 
+### AMP page and campaign links
+
+The live, server-rendered AMP alternative is `/amp/` (`/amp` redirects there). The main page advertises it with `rel="amphtml"` and a footer link; AMP points back to the main canonical URL, so the sitemap lists the canonical page once. Both pages use the same published, unexpired offers and build version. The AMP page includes the AMP runtime, inline AMP styles, responsive `amp-img` logo, and Skimlinks publisher `312095X1800668`. AMP scripts are confined to the AMP document.
+
+On AMP, eligible offers without an existing affiliate destination link directly to retailers so Skimlinks can process them. Explicit offer affiliate links and the Estée Lauder fallback keep the existing `/go/` tracking route. Direct Skimlinks links do not count towards the app's `/go/` click totals. AMP includes an affiliate disclosure; newsletter signup and interactive filters remain on the full site.
+
+At startup, a recorded one-time content update adds the No7 US campaign offer if missing and saves the supplied No7, Sephora, Cult Beauty and Estée Lauder Canada reference links. The Sephora link is a Poland Halloween campaign and does not replace UK offer destinations. Cult Beauty uses the clean `cultbeauty.com` Em the Nutritionist campaign URL. The Canadian Estée Lauder link stays separate from the UK Awin fallback. Later admin edits are preserved. This update does not rerun the full seed process.
+
+Run `pnpm check:amp` for route, document structure, escaping, offer visibility, affiliate routing, campaign update, and version checks against an isolated database. These checks do not replace validation with the official AMP validator; its runtime/rules CDN must be accessible for that validation.
+
 ### Live on hermes-box
 
 Live at <https://lumiere.dazeb.dev> (admin at `/admin`; password in `~/secrets/lumiere.env`). Its own domain is **beautypromos.deals**: the Cloudflare zone and DNS records are ready (A to hermes-box, `www` CNAME, no-mail SPF/DMARC/DKIM). Once the domain is registered and its nameservers are `colette.ns.cloudflare.com` and `scott.ns.cloudflare.com`, run `pnpm go-live`. It serves the site on beautypromos.deals, waits for the certificate, then makes `www.beautypromos.deals` and `lumiere.dazeb.dev` permanent redirects to it, restoring the Caddyfile backup if any step fails.
