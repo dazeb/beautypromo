@@ -1,7 +1,7 @@
 export const BLOG_POST = {
   slug: "the-beauty-edit",
   path: "/blog/the-beauty-edit/",
-  title: "The Beauty Edit: Skincare, Makeup and Gifts, Considered",
-  description: "Meet the beauty brands in our edit and find a thoughtful way to shop skincare, makeup, fragrance and gift sets, with value and regional terms in mind.",
+  title: "Skincare, Makeup and Gifts: What to Check Before You Buy",
+  description: "A guide to product sizes, shade choices, gift-set value and regional shopping, with No7, Estée Lauder, Cult Beauty and Sephora.",
   published: "2026-11-01",
 } as const;

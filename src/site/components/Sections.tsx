@@ -12,7 +12,7 @@ export function Featured({ deal }: { deal: PublicDeal }) {
           <span className="featured__sub">{deal.sub}</span>
         </div>
         <div className="featured__copy">
-          <p className="eyebrow">Offer of the week · {deal.retailer}</p>
+          <p className="eyebrow">Featured offer · {deal.retailer}</p>
           <h2 id="featured-title">{deal.title}</h2>
           <p>{deal.details}</p>
           <p className="featured__terms">{deal.terms}</p>
@@ -151,7 +151,7 @@ export function Newsletter() {
       <div className="newsletter__card">
         <div>
           <p className="eyebrow">The Sunday Edit</p>
-          <h2 id="newsletter-title">The week's best offers, in one quiet email</h2>
+          <h2 id="newsletter-title">Get new offers by email</h2>
         </div>
         {state.kind === "done" ? (
           <p className="newsletter__done" role="status">

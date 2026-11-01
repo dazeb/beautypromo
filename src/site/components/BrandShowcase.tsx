@@ -14,15 +14,15 @@ export function BrandShowcase({ deals }: { deals: PublicDeal[] }) {
   return (
     <section className="section brands" aria-labelledby="brands-title">
       <div className="section__head">
-        <p className="eyebrow">The names on our edit</p>
-        <h2 id="brands-title">Beauty brands worth a look</h2>
+        <h2 id="brands-title">Shop by brand</h2>
       </div>
       <div className="brands__grid">
         {brands.map((deal) => (
           <OutboundLink key={deal.slug} deal={deal} source="brand-showcase" className="brand-tile" context={deal.retailer}>
             <span className="brand-tile__orb" aria-hidden="true" />
+            <span className="brand-tile__bottle" aria-hidden="true" />
             <span className="brand-tile__wordmark">{deal.retailer}</span>
-            <span className="brand-tile__offer">{deal.headline || "Explore the offer"} ↗</span>
+            <span className="brand-tile__offer">{deal.headline || "Explore the offer"} <span aria-hidden="true">↗</span></span>
           </OutboundLink>
         ))}
       </div>

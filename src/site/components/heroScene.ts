@@ -15,7 +15,7 @@ export function mountHeroScene(container: HTMLElement, onContextLost: () => void
   const camera = new THREE.OrthographicCamera(-3, 3, 3, -3, 0.1, 40);
   camera.position.set(4, 3.5, 9);
   camera.lookAt(0, 0.3, 0);
-  scene.add(new THREE.HemisphereLight(0xfff3e8, 0x754453, 2.3));
+  scene.add(new THREE.HemisphereLight(0xfff3f8, 0xc994b3, 2.3));
 
   const keyLight = new THREE.DirectionalLight(0xfff3df, 4.2);
   keyLight.position.set(-4, 7, 6);
@@ -31,12 +31,12 @@ export function mountHeroScene(container: HTMLElement, onContextLost: () => void
   fillLight.position.set(5, 2, -3);
   scene.add(fillLight);
 
-  const gold = new THREE.MeshStandardMaterial({ color: 0xc6a06a, metalness: 0.8, roughness: 0.24 });
-  const wine = new THREE.MeshPhysicalMaterial({ color: 0x9b6070, metalness: 0.22, roughness: 0.25, clearcoat: 1 });
-  const pink = new THREE.MeshPhysicalMaterial({ color: 0xd67a9b, metalness: 0.08, roughness: 0.3, clearcoat: 1 });
-  const dark = new THREE.MeshPhysicalMaterial({ color: 0x694552, metalness: 0.48, roughness: 0.22, clearcoat: 1 });
-  const blush = new THREE.MeshPhysicalMaterial({ color: 0xe8a79e, metalness: 0.08, roughness: 0.22, clearcoat: 1, clearcoatRoughness: 0.12 });
-  const powder = new THREE.MeshStandardMaterial({ color: 0xd18c7c, metalness: 0.12, roughness: 0.66 });
+  const gold = new THREE.MeshStandardMaterial({ color: 0xcfb88e, metalness: 0.6, roughness: 0.32 });
+  const pedestalPink = new THREE.MeshPhysicalMaterial({ color: 0xe8a0bf, metalness: 0.15, roughness: 0.4, clearcoat: 0.3 });
+  const pink = new THREE.MeshPhysicalMaterial({ color: 0xee6caa, metalness: 0.08, roughness: 0.3, clearcoat: 1 });
+  const roseChrome = new THREE.MeshPhysicalMaterial({ color: 0xe6a4c8, metalness: 0.25, roughness: 0.35, clearcoat: 0.3 });
+  const blush = new THREE.MeshPhysicalMaterial({ color: 0xf5c0d8, metalness: 0.08, roughness: 0.38, clearcoat: 0.25, clearcoatRoughness: 0.2 });
+  const powder = new THREE.MeshStandardMaterial({ color: 0xeaa2c4, metalness: 0.12, roughness: 0.66 });
   const group = new THREE.Group();
   scene.add(group);
 
@@ -53,7 +53,7 @@ export function mountHeroScene(container: HTMLElement, onContextLost: () => void
     return mesh;
   };
 
-  const base = cylinder(2.2, 0.24, wine);
+  const base = cylinder(2.2, 0.24, pedestalPink);
   base.scale.z = 0.83;
   base.position.y = -1.68;
   group.add(base);
@@ -86,12 +86,12 @@ export function mountHeroScene(container: HTMLElement, onContextLost: () => void
   labelCanvas.height = 512;
   const labelContext = labelCanvas.getContext("2d");
   if (labelContext) {
-    labelContext.fillStyle = "#f9e9dc";
+    labelContext.fillStyle = "#fff1f8";
     labelContext.fillRect(0, 0, 512, 512);
     labelContext.strokeStyle = "#c09b76";
     labelContext.lineWidth = 3;
     labelContext.strokeRect(22, 22, 468, 468);
-    labelContext.fillStyle = "#5a2631";
+    labelContext.fillStyle = "#b63876";
     labelContext.textAlign = "center";
     labelContext.font = "28px Georgia";
     labelContext.fillText("THE", 256, 125);
@@ -112,7 +112,7 @@ export function mountHeroScene(container: HTMLElement, onContextLost: () => void
   lipstick.position.set(-1.4, -0.56, 0.45);
   lipstick.rotation.z = -0.14;
   group.add(lipstick);
-  const lipstickCase = cylinder(0.32, 1.32, dark);
+  const lipstickCase = cylinder(0.32, 1.32, roseChrome);
   lipstick.add(lipstickCase);
   const lipstickBand = cylinder(0.33, 0.18, gold);
   lipstickBand.position.y = 0.7;
@@ -154,6 +154,7 @@ export function mountHeroScene(container: HTMLElement, onContextLost: () => void
   let lastRendered = 0;
   let pointerX = 0;
   let pointerY = 0;
+  let motionTime = 0;
 
   const resize = () => {
     const width = container.clientWidth;
@@ -173,9 +174,14 @@ export function mountHeroScene(container: HTMLElement, onContextLost: () => void
     frame = 0;
     if (!visible || document.hidden || lost) return;
     if (time - lastRendered >= 1000 / 30) {
+      const delta = Math.min(Math.max((time - lastRendered) / 1000, 0), 0.05);
+      motionTime += delta;
       group.rotation.y += (pointerX * 0.16 - group.rotation.y) * 0.08;
       group.rotation.x += (pointerY * 0.08 - group.rotation.x) * 0.08;
-      group.position.y = Math.sin(time * 0.00065) * 0.045;
+      group.position.y = Math.sin(motionTime * 0.65) * 0.045;
+      bottle.position.y = -0.36 + Math.sin(motionTime * 0.9) * 0.055;
+      lipstick.position.y = -0.56 + Math.sin(motionTime * 0.9 + 1.5) * 0.04;
+      compact.rotation.z = -0.2 + Math.sin(motionTime * 0.7) * 0.035;
       renderer.render(scene, camera);
       lastRendered = time;
     }
@@ -188,6 +194,9 @@ export function mountHeroScene(container: HTMLElement, onContextLost: () => void
     if (reducedMotion.matches) {
       group.position.y = 0;
       group.rotation.set(0, 0, 0);
+      bottle.position.y = -0.36;
+      lipstick.position.y = -0.56;
+      compact.rotation.z = -0.2;
       renderer.render(scene, camera);
     } else {
       frame = requestAnimationFrame(draw);
