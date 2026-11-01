@@ -59,7 +59,7 @@ At startup, a recorded one-time content update adds the No7 US campaign offer if
 
 Run `pnpm check:amp` for route, document structure, escaping, offer visibility, affiliate routing, campaign update, and version checks against an isolated database. After building, `pnpm validate:amp` uses the official AMP validator to check a complete offers document and an empty edit. It downloads the validator rules from `cdn.ampproject.org` through the configured HTTPS proxy; set `AMP_VALIDATOR_JS` to a cached official `validator_wasm.js` file for offline validation. An inaccessible rules file is a failed validation attempt, not a pass. The GitHub Actions verification job runs these checks before deployment.
 
-The Dior US Beauty and Care Ritual gift-set listing is added by a separate recorded content update, so databases that already received the earlier campaign links also receive Dior. Its price, contents and availability are not marked verified. Subsequent admin edits are preserved.
+The Dior US Beauty and Care Ritual gift-set listing and Rouge Dior Sequin Liquid Duo listing are added by separate recorded content updates, so databases that already received earlier campaigns also receive the new Dior offers. Their price, contents and availability are not marked verified. Subsequent admin edits are preserved.
 
 ### Journal and product guide
 

@@ -5,6 +5,7 @@ import { dealSchema, retailerSchema } from "./validation.ts";
 const updates = [
   { id: "2026-11-01-beauty-campaign-links", offerSlug: "no7-beauty-us-campaign", retailers: ["No7 Beauty (US)", "Sephora UK", "Cult Beauty", "Estée Lauder (Canada)"] },
   { id: "2026-11-01-dior-us-gift-set", offerSlug: "dior-us-beauty-care-ritual-gift-set", retailers: ["Dior (US)"] },
+  { id: "2026-11-01-dior-us-rouge-sequin-duo", offerSlug: "dior-us-rouge-sequin-liquid-duo", retailers: [] },
 ];
 
 /** Apply the requested campaigns once; later edits in the admin remain authoritative. */

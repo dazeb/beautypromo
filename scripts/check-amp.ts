@@ -117,6 +117,11 @@ test("requested campaigns are applied once without overwriting later admin edits
   assert.equal(dior.price, null);
   assert.equal(dior.worth, null);
   assert.equal(dior.verified_at, null);
+  const rouge = db().prepare("SELECT * FROM deals WHERE slug = ?").get("dior-us-rouge-sequin-liquid-duo")!;
+  assert.equal(rouge.url, "https://www.dior.com/en_us/beauty/products/rouge-dior-sequin-liquid-duo-holiday-gift-2026-edition-Y0000440.html?skimoffer=4225779");
+  assert.equal(rouge.retailer, "Dior (US)");
+  assert.equal(rouge.price, null);
+  assert.equal(rouge.verified_at, null);
   const offer = db().prepare("SELECT * FROM deals WHERE slug = ?").get("no7-beauty-us-campaign")!;
   assert.equal(offer.url, no7);
   const sephora = db().prepare("SELECT * FROM retailers WHERE name = ?").get("Sephora UK")!;
