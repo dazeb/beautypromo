@@ -673,5 +673,27 @@
     "featured": false,
     "status": "published",
     "verifiedAt": "2026-09-21T12:00:00Z"
+  },
+  {
+    "slug": "advent-nails-inc",
+    "retailer": "Nails.INC",
+    "title": "Nails.INC 24 Days of Nails Advent Calendar",
+    "headline": "24 Days of Nails",
+    "sub": "24 nail polishes · 1-Step Gel It’s Topless",
+    "details": "Unwrap 24 nail polishes with the Nails.INC 24 Days of Nails Advent Calendar, made for gifting or keeping for yourself. Nails.INC lists it at £70 against an RRP of £170.",
+    "categories": [
+      "advent",
+      "gift"
+    ],
+    "code": null,
+    "terms": "Offer runs 16 Oct 2026 to 1 Jan 2027, UK only. Check Nails.INC for the final price, stock and terms.",
+    "url": "https://nailsinc.com/products/24-days-of-nails-advent-calendar?skimoffer=4235413",
+    "price": 70,
+    "worth": 170,
+    "note": "Was £170",
+    "endsAt": "2027-01-01T23:59:00Z",
+    "featured": false,
+    "status": "published",
+    "verifiedAt": "2026-11-01T12:00:00Z"
   }
 ]
