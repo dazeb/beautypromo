@@ -55,6 +55,11 @@ function uniqueSlugError(e: unknown) {
 
 export const app = new Hono();
 
+app.use("/api/*", async (context, next) => {
+  context.header("X-Robots-Tag", "noindex, nofollow");
+  await next();
+});
+
 /* ---------- Public ---------- */
 
 app.get("/api/public", (c) => {

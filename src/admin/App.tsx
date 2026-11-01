@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { adminMetadata } from "../shared/metadata";
 import { SIGNED_OUT, api } from "./api";
 import { Button, ErrorNote, Kbd, cx } from "./components/ui";
 import { Dashboard } from "./pages/Dashboard";
@@ -102,6 +103,13 @@ export function App() {
   const { path } = useLocation();
   const [session, setSession] = useState<{ signedIn: boolean; configured: boolean }>();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const metadata = adminMetadata(path);
+    const description = session?.signedIn ? metadata.description : "Sign in to the private beautypromos administration area.";
+    document.querySelector('meta[name="description"]')?.setAttribute("content", description);
+    document.querySelector('link[rel="canonical"]')?.setAttribute("href", metadata.canonical);
+  }, [path, session?.signedIn]);
 
   const check = () =>
     api<{ signedIn: boolean; configured: boolean }>("/me")

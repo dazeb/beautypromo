@@ -37,6 +37,16 @@ The server puts the published offers into the HTML as it sends the home page, so
 | `HOST` | Listen address, default `127.0.0.1` (put a reverse proxy in front) |
 | `SESSION_COOKIE_SECURE` | `false` to allow the cookie over HTTP |
 
+### Search metadata and sitemap
+
+The public homepage includes its title and description, an absolute canonical URL, Open Graph and Twitter card metadata, a 1200×630 PNG sharing image, and Organization, WebSite and CollectionPage JSON-LD. The sharing artwork source is `assets/social-card.svg`; the published image is `public/social-card.png`.
+
+Submit **https://beautypromos.deals/sitemap.xml** in Bing Webmaster Tools or Google Search Console. `public/sitemap.xml` lists only the canonical public homepage: filters and sections are part of that page, not separate indexable URLs. Add entries when new public pages are introduced. There is no invented last-modified timestamp.
+
+`public/robots.txt` advertises the sitemap and allows crawlers to read indexing directives. Admin pages have route-specific titles, descriptions and canonical URLs, with `noindex, nofollow` in both HTML and response headers. API responses and affiliate redirects are also marked `noindex`; none belongs in the sitemap. Indexing directives are not access controls; admin authentication remains required.
+
+Run `pnpm check:seo` to build and check page metadata, structured data, sitemap coverage, robots directives and the sharing image against an isolated temporary database.
+
 ### Live on hermes-box
 
 Live at <https://lumiere.dazeb.dev> (admin at `/admin`; password in `~/secrets/lumiere.env`). Its own domain is **beautypromos.deals**: the Cloudflare zone and DNS records are ready (A to hermes-box, `www` CNAME, no-mail SPF/DMARC/DKIM). Once the domain is registered and its nameservers are `colette.ns.cloudflare.com` and `scott.ns.cloudflare.com`, run `pnpm go-live`. It serves the site on beautypromos.deals, waits for the certificate, then makes `www.beautypromos.deals` and `lumiere.dazeb.dev` permanent redirects to it, restoring the Caddyfile backup if any step fails.

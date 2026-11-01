@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#faf6f1"/>
+  <circle cx="1020" cy="300" r="230" fill="#f3ece4"/>
+  <circle cx="1020" cy="300" r="180" fill="none" stroke="#e2d6cb" stroke-width="2"/>
+  <text x="72" y="100" fill="#5a1f2b" font-family="Liberation Serif" font-size="54">beautypromos</text>
+  <text x="76" y="135" fill="#6e625a" font-family="DejaVu Sans" font-size="16" letter-spacing="5">THE BEAUTY EDIT</text>
+  <path d="M76 182H690" fill="none" stroke="#e2d6cb" stroke-width="2"/>
+  <text x="72" y="295" fill="#1f1a17" font-family="Liberation Serif" font-size="91">Good beauty.</text>
+  <text x="72" y="390" fill="#5a1f2b" font-family="Liberation Serif" font-style="italic" font-size="91">Better finds.</text>
+  <text x="76" y="465" fill="#6e625a" font-family="DejaVu Sans" font-size="23">UK makeup, skincare and fragrance offers</text>
+  <text x="76" y="560" fill="#5a1f2b" font-family="DejaVu Sans" font-size="21">beautypromos.deals</text>
+  <rect x="850" y="265" width="124" height="230" rx="18" fill="#ecd6cd" stroke="#c9877a" stroke-width="2"/>
+  <rect x="870" y="200" width="84" height="80" rx="8" fill="#b8976a"/>
+  <rect x="865" y="330" width="94" height="95" rx="3" fill="#faf6f1"/>
+  <path d="M886 360H938M894 379H930M898 397H926" fill="none" stroke="#b8976a" stroke-width="3"/>
+  <path d="M1028 313V285Q1048 265 1069 282V313Z" fill="#c9877a"/>
+  <rect x="1019" y="313" width="59" height="60" fill="#b8976a"/>
+  <rect x="1010" y="355" width="77" height="135" rx="5" fill="#5a1f2b"/>
+  <path d="M1022 460H1075" fill="none" stroke="#b8976a" stroke-width="2"/>
+</svg>
