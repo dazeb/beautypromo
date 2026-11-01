@@ -695,5 +695,27 @@
     "featured": false,
     "status": "published",
     "verifiedAt": "2026-11-01T12:00:00Z"
+  },
+  {
+    "slug": "code-beautifiedyou-biotreats",
+    "retailer": "BeautifiedYou",
+    "title": "BeautifiedYou.com: 22% off with code BIOTREATS",
+    "headline": "22% off",
+    "sub": "with code BIOTREATS",
+    "details": "Take 22% off at BeautifiedYou.com with the code BIOTREATS.",
+    "categories": [
+      "skincare",
+      "code"
+    ],
+    "code": "BIOTREATS",
+    "terms": "Offer expires 8 Nov 2026. BeautifiedYou.com is a US-based store, so check delivery to the UK, the final price and any exclusions at checkout.",
+    "url": "https://www.beautifiedyou.com?skimoffer=4236907",
+    "price": null,
+    "worth": null,
+    "note": "Ends 8 Nov",
+    "endsAt": "2026-11-08T23:59:00Z",
+    "featured": false,
+    "status": "published",
+    "verifiedAt": "2026-11-01T12:00:00Z"
   }
 ]
