@@ -39,7 +39,6 @@ export function HeroArt() {
 
   return (
     <div className="hero__art" aria-hidden="true" data-scene-ready={ready}>
-      <div className="hero-art__halo" />
       <div className="hero-art__fallback">
         <div className="hero-art__pedestal" />
         <div className="hero-art__lipstick"><span /></div>

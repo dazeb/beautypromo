@@ -19,8 +19,6 @@ export function BrandShowcase({ deals }: { deals: PublicDeal[] }) {
       <div className="brands__grid">
         {brands.map((deal) => (
           <OutboundLink key={deal.slug} deal={deal} source="brand-showcase" className="brand-tile" context={deal.retailer}>
-            <span className="brand-tile__orb" aria-hidden="true" />
-            <span className="brand-tile__bottle" aria-hidden="true" />
             <span className="brand-tile__wordmark">{deal.retailer}</span>
             <span className="brand-tile__offer">{deal.headline || "Explore the offer"} <span aria-hidden="true">↗</span></span>
           </OutboundLink>
