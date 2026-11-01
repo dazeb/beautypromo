@@ -1,4 +1,4 @@
-<img src="public/beautypromos-logo.png" width="280" height="94" alt="beautypromos">
+<img src="assets/icon.svg" width="64" height="64" alt="">
 
 # beautypromos — The Beauty Edit
 
@@ -65,7 +65,7 @@ The Dior US Beauty and Care Ritual gift-set listing and Rouge Dior Sequin Liquid
 
 ### Journal and product guide
 
-The server-rendered journal is `/blog/`, with the first article at `/blog/the-beauty-edit/`: **Skincare, Makeup and Gifts: What to Check Before You Buy**. It discusses No7 and Estée Lauder ranges, Cult Beauty and Sephora shopping, gift-set value and regional checkout details. It includes an affiliate disclosure and official source links, and does not promise current discounts or claim hands-on product testing.
+The server-rendered journal is `/blog/`, with the first article at `/blog/the-beauty-edit/`: **The Beauty Edit: Skincare, Makeup and Gifts, Considered**. It discusses No7 and Estée Lauder ranges, Cult Beauty and Sephora shopping, gift-set value and regional checkout details. It includes an affiliate disclosure and official source links, and does not promise current discounts or claim hands-on product testing.
 
 The main navigation and homepage introduce the journal. The article includes responsive styling, contents links, current offer suggestions, canonical and social metadata, `BlogPosting` structured data, and the shared numeric build version. Metadata lives in `src/shared/blog.ts`, article copy and routes in `server/blog.ts`, and styling in `public/blog.css`. Run `pnpm check:blog` for route, metadata and escaping checks.
 
@@ -143,7 +143,7 @@ Every Shop button links to `/go/<slug>?s=<section>`. The server logs the click a
 | `src/site/` | Public site (React) |
 | `src/admin/` | Admin panel (React, small client-side router) |
 | `src/shared/` | Types and formatting shared by site, admin and server |
-| `src/styles/` | `site.css` (pink / ivory / champagne, Cormorant Garamond + Manrope) and `admin.css` |
+| `src/styles/` | `site.css` (ivory / wine / champagne, Cormorant Garamond + Manrope) and `admin.css` |
 | `server/app.ts` | API: `/api/public`, `/api/subscribe`, `/go/:slug`, `/api/admin/*` |
 | `server/db.ts` | SQLite schema and row mapping |
 | `server/site.ts`, `server/index.ts` | Production server |

@@ -152,7 +152,7 @@
   outline: none;
 }
 .adm-page-head h1:focus-visible {
-  outline: 2px solid var(--pink);
+  outline: 2px solid var(--wine);
   outline-offset: 4px;
 }
 .adm-page-head__actions {
@@ -297,7 +297,7 @@
 .adm-chart__fill {
   width: 100%;
   min-height: 1px;
-  background: linear-gradient(var(--rose), var(--pink));
+  background: linear-gradient(var(--rose), var(--wine));
   transition: opacity var(--motion-fast) var(--ease), height var(--motion-base) var(--ease);
 }
 .adm-chart__bar:hover .adm-chart__fill {
@@ -421,7 +421,7 @@
   text-decoration: none;
 }
 a.adm-row-title:hover {
-  color: var(--pink);
+  color: var(--wine);
   text-decoration: underline;
 }
 .adm-serif {
@@ -509,7 +509,7 @@ a.adm-row-title:hover {
   color: var(--gold-text);
 }
 .adm-star:hover {
-  color: var(--pink);
+  color: var(--wine);
 }
 
 .adm-empty {
@@ -604,7 +604,7 @@ code {
   margin: 0.1rem 0 0;
 }
 .adm-prog__facts a {
-  color: var(--pink);
+  color: var(--wine);
   font-weight: 600;
 }
 .adm-prog__notes {
@@ -622,7 +622,7 @@ code {
 }
 .adm-prog__help summary {
   cursor: pointer;
-  color: var(--pink);
+  color: var(--wine);
   min-height: var(--tap);
   padding-block: 0.6rem;
 }
@@ -688,7 +688,7 @@ code {
 .adm-badge--expired,
 .adm-badge--bad {
   background: #f3dcd9;
-  color: var(--pink);
+  color: var(--wine);
 }
 
 .adm-btn {
@@ -724,7 +724,7 @@ code {
   color: var(--ivory);
 }
 .adm-btn--primary:hover:not(:disabled) {
-  background: var(--pink);
+  background: var(--wine);
 }
 .adm-btn--secondary {
   background: #fffdfa;
@@ -743,7 +743,7 @@ code {
   background: #f3ece4;
 }
 .adm-btn--danger {
-  background: var(--pink);
+  background: var(--wine);
   color: #fffaf6;
 }
 .adm-btn--light {
@@ -755,7 +755,7 @@ code {
 }
 
 .adm-link {
-  color: var(--pink);
+  color: var(--wine);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
@@ -776,8 +776,8 @@ code {
   margin: 0 0 1rem;
   padding: 0.75rem 1rem;
   background: #f8e6e2;
-  border-left: 3px solid var(--pink);
-  color: var(--pink);
+  border-left: 3px solid var(--wine);
+  color: var(--wine);
 }
 
 /* ---------- Toolbar ---------- */
@@ -867,8 +867,8 @@ code {
   transition: border-color var(--motion-fast) var(--ease), box-shadow var(--motion-fast) var(--ease);
 }
 .adm-input[aria-invalid="true"] {
-  border-color: var(--pink);
-  box-shadow: inset 3px 0 0 var(--pink);
+  border-color: var(--wine);
+  box-shadow: inset 3px 0 0 var(--wine);
 }
 textarea.adm-input {
   resize: vertical;
@@ -911,7 +911,7 @@ input[type="checkbox"] {
 }
 .adm-field__error {
   font-size: 0.78rem;
-  color: var(--pink);
+  color: var(--wine);
   font-weight: 600;
 }
 .adm-inline {

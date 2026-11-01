@@ -71,7 +71,7 @@ export function App({ data }: { data: PublicData }) {
               </span>
             </>
           ) : null}
-          Makeup, skincare and fragrance offers
+          The season's best beauty offers, edited
         </p>
       </aside>
 
@@ -81,26 +81,26 @@ export function App({ data }: { data: PublicData }) {
         </a>
         <nav className="site-nav" aria-label="Sections">
           {ending.length > 0 ? <a href="#ending">Ending soon</a> : null}
-          <a href="#deals">Offers</a>
+          <a href="#deals">The edit</a>
           {advent.length > 0 ? <a href="#advent">Advent</a> : null}
           <a href="#dates">Dates</a>
-          <a href="/blog/">Blog</a>
+          <a href="/blog/">The journal</a>
         </nav>
       </header>
 
       <main id="top" className="site-motion" ref={mainRef}>
         <section className="hero">
           <div className="hero__copy">
-            <p className="eyebrow hero__eyebrow"><span /> beautypromos</p>
+            <p className="eyebrow hero__eyebrow"><span /> Your beauty edit starts here</p>
             <h1>
-              Beauty offers,<br /><em>in one place</em>
+              Good beauty.<br /><em>Better finds.</em>
             </h1>
             <p className="hero__lede">
-              Makeup, skincare and fragrance from the brands you know. Check the details, then shop with the retailer.
+              A considered edit of makeup, skincare and fragrance offers from brands you love. All the beauty, with a little less spend.
             </p>
             <div className="hero__actions">
               <a className="btn btn--ink" href="#deals">
-                Browse offers <span aria-hidden="true">↗</span>
+                Explore the offers <span aria-hidden="true">↗</span>
               </a>
               {advent.length > 0 ? (
                 <a className="btn btn--line" href="#advent">
@@ -137,7 +137,8 @@ export function App({ data }: { data: PublicData }) {
         <section id="deals" className="section" aria-labelledby="deals-title">
           <div className="section__head section__head--split">
             <div>
-              <h2 id="deals-title">Latest offers</h2>
+              <p className="eyebrow">The edit</p>
+              <h2 id="deals-title">Every offer, considered</h2>
             </div>
             <div className="filters" role="group" aria-label="Filter offers">
               {FILTERS.map((f) => (
@@ -161,8 +162,8 @@ export function App({ data }: { data: PublicData }) {
         <Advent deals={advent} />
         <KeyDates dates={data.dates} now={now} />
         <section className="section journal" aria-labelledby="journal-title">
-          <p className="eyebrow">From the blog</p>
-          <h2 id="journal-title">Before you buy</h2>
+          <p className="eyebrow">The journal</p>
+          <h2 id="journal-title">A little beauty reading.</h2>
           <article className="journal__card">
             <div className="journal__topics" aria-hidden="true"><span>Skincare</span><span>Makeup</span><span>Gifting</span></div>
             <div className="journal__copy"><h3><a href={BLOG_POST.path}>{BLOG_POST.title}</a></h3><p>{BLOG_POST.description}</p><a className="journal__link" href={BLOG_POST.path}>Read the article <span aria-hidden="true">↗</span></a></div>
@@ -170,6 +171,26 @@ export function App({ data }: { data: PublicData }) {
         </section>
         <Newsletter />
 
+        <section className="section promise" aria-labelledby="promise-title">
+          <h2 id="promise-title" className="visually-hidden">
+            How we choose
+          </h2>
+          <div className="promise__item">
+            <span className="promise__num">I</span>
+            <h3>Read at the source</h3>
+            <p>Every price, code and end date comes from the retailer's own offer page, not a voucher aggregator.</p>
+          </div>
+          <div className="promise__item">
+            <span className="promise__num">II</span>
+            <h3>Edited, not exhaustive</h3>
+            <p>Only the offers we'd tell a friend about. Real value, recognisable brands, sensible spend thresholds.</p>
+          </div>
+          <div className="promise__item">
+            <span className="promise__num">III</span>
+            <h3>Gone when it's gone</h3>
+            <p>Offers retire themselves the moment they expire, so what you see is what you can still buy.</p>
+          </div>
+        </section>
       </main>
 
       <footer className="site-footer">

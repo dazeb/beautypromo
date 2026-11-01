@@ -39,6 +39,7 @@ export function HeroArt() {
 
   return (
     <div className="hero__art" aria-hidden="true" data-scene-ready={ready}>
+      <span className="hero-art__overline">A little luxury, for less</span>
       <div className="hero-art__fallback">
         <div className="hero-art__pedestal" />
         <div className="hero-art__lipstick"><span /></div>
@@ -46,7 +47,7 @@ export function HeroArt() {
         <div className="hero-art__compact"><span /></div>
       </div>
       <div className="hero-art__scene" ref={sceneRef} />
-      <div className="hero-art__caption"><span>Makeup · skincare · fragrance</span></div>
+      <div className="hero-art__caption"><span>The beauty edit</span><span>Curated for you&nbsp; ↗</span></div>
     </div>
   );
 }
