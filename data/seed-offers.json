@@ -717,5 +717,26 @@
     "featured": false,
     "status": "published",
     "verifiedAt": "2026-11-01T12:00:00Z"
+  },
+  {
+    "slug": "code-prettylittlething-uk12plt",
+    "retailer": "PrettyLittleThing",
+    "title": "PrettyLittleThing: at least 20% off everything plus an extra 12% off",
+    "headline": "20% off + 12%",
+    "sub": "with code UK12PLT",
+    "details": "At least 20% off everything at PrettyLittleThing, plus an extra 12% off with the code UK12PLT. Fashion offer; beauty is excluded.",
+    "categories": [
+      "code"
+    ],
+    "code": "UK12PLT",
+    "terms": "UK only. Excludes beauty. Runs 26 Oct to 1 Nov 2026. Check PrettyLittleThing for the final price and exclusions.",
+    "url": "https://www.prettylittlething.com/?skimoffer=4248217",
+    "price": null,
+    "worth": null,
+    "note": "Excludes beauty",
+    "endsAt": "2026-11-01T23:59:00Z",
+    "featured": false,
+    "status": "published",
+    "verifiedAt": "2026-11-01T12:00:00Z"
   }
 ]

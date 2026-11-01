@@ -8,6 +8,7 @@ const updates = [
   { id: "2026-11-01-dior-us-rouge-sequin-duo", offerSlug: "dior-us-rouge-sequin-liquid-duo", retailers: [] },
   { id: "2026-11-01-nails-inc-advent", offerSlug: "advent-nails-inc", retailers: ["Nails.INC"] },
   { id: "2026-11-01-beautifiedyou-biotreats", offerSlug: "code-beautifiedyou-biotreats", retailers: ["BeautifiedYou"] },
+  { id: "2026-11-01-prettylittlething-uk12plt", offerSlug: "code-prettylittlething-uk12plt", retailers: ["PrettyLittleThing"] },
 ];
 
 /** Apply the requested campaigns once; later edits in the admin remain authoritative. */
