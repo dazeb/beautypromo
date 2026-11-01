@@ -26,6 +26,8 @@ pnpm build
 pnpm start                # serves dist/ + the API on 127.0.0.1:8790
 ```
 
+The footer version is generated at build time as `<major>.<minor>.<commit count>` (for example, `0.1.24`). The prefix comes from `package.json`; use a full Git checkout so each new commit increases the final number. GitHub Actions fetches the full history automatically. Builds without Git metadata fall back to the package version.
+
 The server puts the published offers into the HTML as it sends the home page, so the first paint needs no extra request. Keep `DATABASE_PATH` on a persistent disk. The admin cookie is `Secure` in production. If you serve over plain HTTP on a LAN, set `SESSION_COOKIE_SECURE=false`.
 
 | Variable | Purpose |

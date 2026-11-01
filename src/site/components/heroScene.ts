@@ -32,8 +32,9 @@ export function mountHeroScene(container: HTMLElement, onContextLost: () => void
   scene.add(fillLight);
 
   const gold = new THREE.MeshStandardMaterial({ color: 0xc6a06a, metalness: 0.8, roughness: 0.24 });
-  const wine = new THREE.MeshPhysicalMaterial({ color: 0x681c33, metalness: 0.22, roughness: 0.25, clearcoat: 1 });
-  const dark = new THREE.MeshPhysicalMaterial({ color: 0x251819, metalness: 0.48, roughness: 0.22, clearcoat: 1 });
+  const wine = new THREE.MeshPhysicalMaterial({ color: 0x9b6070, metalness: 0.22, roughness: 0.25, clearcoat: 1 });
+  const pink = new THREE.MeshPhysicalMaterial({ color: 0xd67a9b, metalness: 0.08, roughness: 0.3, clearcoat: 1 });
+  const dark = new THREE.MeshPhysicalMaterial({ color: 0x694552, metalness: 0.48, roughness: 0.22, clearcoat: 1 });
   const blush = new THREE.MeshPhysicalMaterial({ color: 0xe8a79e, metalness: 0.08, roughness: 0.22, clearcoat: 1, clearcoatRoughness: 0.12 });
   const powder = new THREE.MeshStandardMaterial({ color: 0xd18c7c, metalness: 0.12, roughness: 0.66 });
   const group = new THREE.Group();
@@ -119,10 +120,10 @@ export function mountHeroScene(container: HTMLElement, onContextLost: () => void
   const lipstickHolder = cylinder(0.245, 0.24, gold);
   lipstickHolder.position.y = 0.88;
   lipstick.add(lipstickHolder);
-  const lipstickTip = cylinder(0.19, 0.65, wine);
+  const lipstickTip = cylinder(0.19, 0.65, pink);
   lipstickTip.position.y = 1.29;
   lipstick.add(lipstickTip);
-  const tipTop = new THREE.Mesh(new THREE.SphereGeometry(0.19, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), wine);
+  const tipTop = new THREE.Mesh(new THREE.SphereGeometry(0.19, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), pink);
   tipTop.position.y = 1.61;
   lipstick.add(tipTop);
 

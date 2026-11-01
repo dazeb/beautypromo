@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import brandLogo from "../../assets/beautypromos-logo.png";
 import { isEndingSoon, isLive, pounds } from "../shared/format";
 import { CATEGORIES, type PublicData } from "../shared/types";
 import { DealCard } from "./components/DealCard";
@@ -73,8 +74,7 @@ export function App({ data }: { data: PublicData }) {
 
       <header className="site-header">
         <a className="wordmark" href="#top">
-          <span className="wordmark__name">beautypromos</span>
-          <span className="wordmark__tag">The Beauty Edit</span>
+          <img className="wordmark__logo" src={brandLogo} alt="beautypromos — The Beauty Edit" width="2172" height="724" />
         </a>
         <nav className="site-nav" aria-label="Sections">
           {ending.length > 0 ? <a href="#ending">Ending soon</a> : null}
@@ -183,8 +183,7 @@ export function App({ data }: { data: PublicData }) {
 
       <footer className="site-footer">
         <div className="wordmark wordmark--footer">
-          <span className="wordmark__name">beautypromos</span>
-          <span className="wordmark__tag">The Beauty Edit</span>
+          <img className="wordmark__logo" src={brandLogo} alt="beautypromos — The Beauty Edit" width="2172" height="724" loading="lazy" />
         </div>
         <p className="site-footer__note">
           beautypromos is independent. Some links are affiliate links, which means we may earn a small commission if you buy, at no extra cost to you.
@@ -196,6 +195,7 @@ export function App({ data }: { data: PublicData }) {
             Last checked <Verified iso={data.verifiedOn} />. Prices in GBP.
           </p>
         ) : null}
+        <p className="site-footer__version">Version {__APP_VERSION__}</p>
       </footer>
 
       <div className={`toast${toast.message ? " toast--show" : ""}`} role="status" aria-live="polite">

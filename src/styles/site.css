@@ -3,7 +3,7 @@
   --paper: #f3ece4;
   --blush: #ecd6cd;
   --rose: #c9877a;
-  --wine: #5a1f2b;
+  --wine: #824553;
   --gold: #b8976a;
   --ink: #1f1a17;
   --muted: #6e625a;
@@ -155,6 +155,12 @@ em {
   font-style: italic;
   font-size: 1.9rem;
   font-weight: 500;
+}
+.wordmark__logo {
+  display: block;
+  width: min(17.5rem, 66vw);
+  max-width: 100%;
+  height: auto;
 }
 .wordmark__tag {
   margin-top: 0.3rem;
@@ -371,7 +377,7 @@ em {
   height: 13%;
   border: 2px solid #c3996a;
   border-radius: 50%;
-  background: linear-gradient(#f2d9c9 35%, #8a4750 38%, #4c1d2b 100%);
+  background: linear-gradient(#f2d9c9 35%, #b77a89 38%, #8b4c5f 100%);
   box-shadow: 0 1.2rem 1.5rem #713d3b55;
 }
 .hero-art__bottle {
@@ -422,7 +428,7 @@ em {
   height: 33%;
   transform: rotate(-13deg);
   border-radius: 5% 5% 8% 8%;
-  background: linear-gradient(90deg, #21171a, #65464a 35%, #1d1417 75%);
+  background: linear-gradient(90deg, #694552, #a77988 35%, #623f4d 75%);
   box-shadow: 0.5rem 0.7rem 0.7rem #63343c44;
 }
 .hero-art__lipstick::before {
@@ -440,7 +446,7 @@ em {
   width: 64%;
   height: 45%;
   border-radius: 70% 35% 0 0;
-  background: linear-gradient(90deg, #561629, #a83a4d 50%, #5a1f2b);
+  background: linear-gradient(90deg, #b54d78, #ed9fbd 50%, #bf6088);
 }
 .hero-art__compact {
   position: absolute;
@@ -520,8 +526,8 @@ em {
   text-align: center;
   padding: 2.5rem 1.5rem;
   background:
-    radial-gradient(circle at 30% 20%, #a14a55 0, transparent 55%),
-    radial-gradient(circle at 80% 90%, #3a1219 0, transparent 60%),
+    radial-gradient(circle at 30% 20%, #9c5969 0, transparent 55%),
+    radial-gradient(circle at 80% 90%, #784550 0, transparent 60%),
     var(--wine);
 }
 .featured__headline {
@@ -537,7 +543,7 @@ em {
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #e8c9bd;
+  color: #fffaf6;
 }
 .featured__copy {
   padding: clamp(1.5rem, 5vw, 4rem);
@@ -1174,6 +1180,12 @@ em {
   margin: 0;
   font-size: 0.72rem;
   letter-spacing: 0.08em;
+  color: var(--faint);
+}
+.site-footer__version {
+  margin: 1rem 0 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
   color: var(--faint);
 }
 
