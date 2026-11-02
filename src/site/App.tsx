@@ -6,7 +6,8 @@ import { useSiteMotion } from "./useSiteMotion";
 import { DealCard } from "./components/DealCard";
 import { BrandShowcase } from "./components/BrandShowcase";
 import { HeroArt } from "./components/HeroArt";
-import { Advent, EndingSoon, Featured, KeyDates, Newsletter, Verified } from "./components/Sections";
+import { TESTIMONIALS } from "../shared/testimonials";
+import { Advent, EndingSoon, Featured, KeyDates, Newsletter, Testimonials, Verified } from "./components/Sections";
 
 const FILTERS = [{ id: "all", label: "All" }, ...CATEGORIES.filter((c) => c.id !== "advent")];
 
@@ -169,6 +170,7 @@ export function App({ data }: { data: PublicData }) {
             <div className="journal__copy"><h3><a href={BLOG_POST.path}>{BLOG_POST.title}</a></h3><p>{BLOG_POST.description}</p><a className="journal__link" href={BLOG_POST.path}>Read the article <span aria-hidden="true">↗</span></a></div>
           </article>
         </section>
+        <Testimonials items={TESTIMONIALS} />
         <Newsletter />
 
         <section className="section promise" aria-labelledby="promise-title">
