@@ -9,7 +9,7 @@ export function useSiteMotion(rootRef: RefObject<HTMLElement | null>, filter: st
     if (!root || typeof IntersectionObserver === "undefined") return;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
     const animations = new Set<Animation>();
-    const elements = root.querySelectorAll<HTMLElement>(".hero__copy, .hero__art, .hero__stats div, .section__head, .featured__card, .brand-tile, .card, .advent__item, .dates__item, .newsletter__card, .journal__card");
+    const elements = root.querySelectorAll<HTMLElement>(".hero__copy, .hero__art, .hero__stats div, .section__head, .featured__card, .brand-tile, .card, .advent__item, .dates__item, .newsletter__card, .journal__card, .testimonial");
     const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         const element = entry.target as HTMLElement;

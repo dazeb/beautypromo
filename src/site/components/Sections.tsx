@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { goUrl, longDate, pounds, savingPct, timeLeft } from "../../shared/format";
 import type { KeyDate, PublicDeal } from "../../shared/types";
+import type { Testimonial } from "../../shared/testimonials";
 import { OutboundLink } from "./DealCard";
 
 export function Featured({ deal }: { deal: PublicDeal }) {
@@ -126,6 +127,30 @@ export function KeyDates({ dates, now }: { dates: KeyDate[]; now: Date }) {
           );
         })}
       </ol>
+    </section>
+  );
+}
+
+export function Testimonials({ items }: { items: Testimonial[] }) {
+  if (items.length === 0) return null;
+  return (
+    <section className="section testimonials" aria-labelledby="testimonials-title">
+      <div className="section__head">
+        <p className="eyebrow">Shopper feedback</p>
+        <h2 id="testimonials-title">What shoppers say</h2>
+      </div>
+      <ul className="testimonials__list">
+        {items.map((t, i) => (
+          <li key={i} className="testimonial">
+            <figure>
+              <blockquote>
+                <p>{t.quote}</p>
+              </blockquote>
+              <figcaption>{t.author}</figcaption>
+            </figure>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
