@@ -824,5 +824,71 @@
     "featured": false,
     "status": "published",
     "verifiedAt": "2026-11-01T12:00:00Z"
+  },
+  {
+    "slug": "kisslove-hair-new-hair-up-to-40-off",
+    "retailer": "Kisslove Hair",
+    "title": "New hair up to 40% off",
+    "headline": "Up to 40% off",
+    "sub": "Wigs & hair extensions · new arrivals",
+    "details": "New-arrival wigs and hair extensions on Kisslove Hair's site, with up to 40% off selected styles. Check the collection for current prices and shades.",
+    "categories": [
+      "hair"
+    ],
+    "code": null,
+    "terms": "Impact campaign offer running to 18 November 2026. Prices are in US dollars. Shipping, eligibility and exclusions are set by Kisslove Hair.",
+    "url": "https://www.kisslovehair.com/collections/new-arrival",
+    "affiliateUrl": "https://kisslovehaircom.pxf.io/c/3599935/4119168/48215",
+    "price": null,
+    "worth": null,
+    "note": null,
+    "endsAt": "2026-11-18T20:00:00Z",
+    "featured": false,
+    "status": "published",
+    "verifiedAt": null
+  },
+  {
+    "slug": "kisslove-hair-new-customers-5-off",
+    "retailer": "Kisslove Hair",
+    "title": "Extra 5% off for new customers",
+    "headline": "Extra 5% off",
+    "sub": "New customers · wigs & extensions",
+    "details": "New customers get an extra 5% off at Kisslove Hair. The offer is listed on the retailer's exclusive offers page.",
+    "categories": [
+      "hair"
+    ],
+    "code": null,
+    "terms": "Impact campaign offer running to 18 November 2026, for new customers. Check the exclusive offers page for current terms.",
+    "url": "https://www.kisslovehair.com/pages/exclusive-offers-for-new-customers",
+    "affiliateUrl": "https://kisslovehaircom.pxf.io/c/3599935/4119166/48215",
+    "price": null,
+    "worth": null,
+    "note": null,
+    "endsAt": "2026-11-18T20:00:00Z",
+    "featured": false,
+    "status": "published",
+    "verifiedAt": null
+  },
+  {
+    "slug": "kisslove-hair-spend-tiers-up-to-110-off",
+    "retailer": "Kisslove Hair",
+    "title": "Spend-based discounts up to $110 off",
+    "headline": "Up to $110 off",
+    "sub": "Spend tiers · US dollars",
+    "details": "Spend-based discounts at Kisslove Hair: 10% off over $129, $30 off over $189, $50 off over $249, $70 off over $299 and $110 off over $389.",
+    "categories": [
+      "hair"
+    ],
+    "code": null,
+    "terms": "Impact campaign offer running to 18 November 2026. Spend thresholds and prices are in US dollars. Check the best-sellers page for current terms.",
+    "url": "https://www.kisslovehair.com/collections/best-sellers",
+    "affiliateUrl": "https://kisslovehaircom.pxf.io/c/3599935/4119165/48215",
+    "price": null,
+    "worth": null,
+    "note": null,
+    "endsAt": "2026-11-18T20:00:00Z",
+    "featured": false,
+    "status": "published",
+    "verifiedAt": null
   }
 ]

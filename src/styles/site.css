@@ -731,6 +731,11 @@ em {
   --tone-b: #d9c7dc;
   --tone-ink: #4b2f52;
 }
+.card[data-tone="hair"] {
+  --tone-a: #f1ebe4;
+  --tone-b: #dccbb8;
+  --tone-ink: #5a4330;
+}
 .card[data-tone="gift"] {
   --tone-a: #f4ead9;
   --tone-b: #e2cfab;

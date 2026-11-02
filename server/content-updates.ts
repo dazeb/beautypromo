@@ -13,6 +13,9 @@ const updates = [
   { id: "2026-11-01-lookfantastic-save", offerSlug: "code-lookfantastic-save", retailers: [] },
   { id: "2026-11-01-beautifiedyou-obagi15", offerSlug: "code-beautifiedyou-obagi15", retailers: [] },
   { id: "2026-11-01-gatineau-welcome15", offerSlug: "code-gatineau-welcome15", retailers: ["Gatineau"] },
+  { id: "2026-11-02-kisslove-hair-40-off", offerSlug: "kisslove-hair-new-hair-up-to-40-off", retailers: ["Kisslove Hair"] },
+  { id: "2026-11-02-kisslove-hair-new-customers", offerSlug: "kisslove-hair-new-customers-5-off", retailers: [] },
+  { id: "2026-11-02-kisslove-hair-spend-tiers", offerSlug: "kisslove-hair-spend-tiers-up-to-110-off", retailers: [] },
 ];
 
 /** Apply the requested campaigns once; later edits in the admin remain authoritative. */

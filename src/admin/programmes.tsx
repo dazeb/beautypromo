@@ -11,6 +11,7 @@ export const NETWORKS: Record<string, string> = {
   Skimlinks: "https://www.skimlinks.com/",
   CJ: "https://www.cj.com/publisher",
   Webgains: "https://www.webgains.com/publishers/",
+  Impact: "https://app.impact.com/",
 };
 
 /** Account-specific link builders require signing in; use the network's verified portal. */

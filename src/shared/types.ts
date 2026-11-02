@@ -2,6 +2,7 @@ export const CATEGORIES = [
   { id: "makeup", label: "Makeup" },
   { id: "skincare", label: "Skincare" },
   { id: "fragrance", label: "Fragrance" },
+  { id: "hair", label: "Hair" },
   { id: "gift", label: "Gifts with purchase" },
   { id: "code", label: "Codes" },
   { id: "advent", label: "Advent calendar" },
