@@ -1139,6 +1139,12 @@ em {
 
 /* ---------- Testimonials ---------- */
 
+.testimonials__note {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
 .testimonials__list {
   list-style: none;
   margin: 0;

@@ -136,9 +136,10 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
   return (
     <section className="section testimonials" aria-labelledby="testimonials-title">
       <div className="section__head">
-        <p className="eyebrow">Shopper feedback</p>
-        <h2 id="testimonials-title">What shoppers say</h2>
+        <p className="eyebrow">Sample testimonials</p>
+        <h2 id="testimonials-title">A little shopper perspective</h2>
       </div>
+      <p className="testimonials__note">Illustrative quotes from fictional shoppers, not customer reviews.</p>
       <ul className="testimonials__list">
         {items.map((t, i) => (
           <li key={i} className="testimonial">
