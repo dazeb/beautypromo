@@ -914,19 +914,19 @@ em {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 32.5rem), 1fr));
-  column-gap: 3rem;
+  column-gap: 2.25rem;
 }
 .advent__item {
   display: grid;
-  grid-template-columns: 1.75rem 1fr auto;
+  grid-template-columns: 1.5rem 1fr auto;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1.25rem 0;
+  gap: 0.6rem;
+  padding: 0.7rem 0;
   border-bottom: 1px solid var(--line);
 }
 .advent__rank {
   font-family: var(--serif);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-variant-numeric: lining-nums tabular-nums;
   color: var(--gold-text);
 }
@@ -938,7 +938,8 @@ em {
 }
 .advent__name {
   font-family: var(--serif);
-  font-size: 1.45rem;
+  font-size: 1.15rem;
+  line-height: 1.25;
   font-weight: 500;
   text-decoration: none;
 }
@@ -953,7 +954,7 @@ em {
 .advent__bar {
   position: relative;
   height: 2px;
-  margin-top: 0.75rem;
+  margin-top: 0.4rem;
   background: var(--line);
 }
 .advent__bar::after {
@@ -965,7 +966,7 @@ em {
 }
 .advent__saving {
   font-family: var(--serif);
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1;
   font-variant-numeric: lining-nums tabular-nums;
   color: var(--wine);
@@ -1255,11 +1256,11 @@ em {
     grid-column: auto;
   }
   .advent__item {
-    grid-template-columns: 2.5rem 1fr auto;
-    gap: 1.25rem;
+    grid-template-columns: 2rem 1fr auto;
+    gap: 0.9rem;
   }
   .advent__saving {
-    font-size: 2.3rem;
+    font-size: 1.7rem;
   }
   .dates__item {
     gap: 1.25rem;
