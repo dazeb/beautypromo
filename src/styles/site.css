@@ -908,37 +908,46 @@ em {
 
 /* ---------- Advent ---------- */
 
+.advent {
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+}
+.advent .section__head {
+  margin-bottom: 1.25rem;
+}
+.advent .section__lede {
+  margin-top: 0.5rem;
+}
 .advent__list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 32.5rem), 1fr));
-  column-gap: 2.25rem;
+  column-gap: 1.5rem;
 }
 .advent__item {
   display: grid;
-  grid-template-columns: 1.5rem 1fr auto;
+  grid-template-columns: 1.25rem 1fr auto;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.7rem 0;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
   border-bottom: 1px solid var(--line);
 }
 .advent__rank {
   font-family: var(--serif);
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-variant-numeric: lining-nums tabular-nums;
   color: var(--gold-text);
 }
 .advent__info {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.05rem;
   min-width: 0;
 }
 .advent__name {
   font-family: var(--serif);
-  font-size: 1.15rem;
+  font-size: 1rem;
   line-height: 1.25;
   font-weight: 500;
   text-decoration: none;
@@ -947,14 +956,14 @@ em {
   color: var(--wine);
 }
 .advent__price {
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
 .advent__bar {
   position: relative;
   height: 2px;
-  margin-top: 0.4rem;
+  margin-top: 0.2rem;
   background: var(--line);
 }
 .advent__bar::after {
@@ -966,14 +975,14 @@ em {
 }
 .advent__saving {
   font-family: var(--serif);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1;
   font-variant-numeric: lining-nums tabular-nums;
   color: var(--wine);
 }
 .advent__saving small {
   font-family: var(--sans);
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   margin-left: 0.2rem;
   color: var(--muted);
 }
@@ -1297,11 +1306,12 @@ em {
     grid-column: auto;
   }
   .advent__item {
-    grid-template-columns: 2rem 1fr auto;
-    gap: 0.9rem;
+    grid-template-columns: 1.6rem 1fr auto;
+    gap: 0.7rem;
+    padding: 0.4rem 0;
   }
   .advent__saving {
-    font-size: 1.7rem;
+    font-size: 1.35rem;
   }
   .dates__item {
     gap: 1.25rem;
